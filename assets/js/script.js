@@ -3,17 +3,13 @@ let gameRulesContainer = document.getElementById('game-rules-container');
 let rulesButton = document.getElementById('rules-button');
 let playButton = document.getElementById('play-button');
 
+let destinationAnswerA = document.getElementById('destination-A');
+let destinationAnswerB = document.getElementById('destination-B');
+let destinationAnswerC = document.getElementById('destination-C');
+let destinationAnswerD = document.getElementById('destination-D');
+
+
 let destinationContainer = document.getElementById('destination-section');
-
-//elements inside destination quiz container
-
-
-//* code adapted from Youtube video Build a Quiz App with Javascript *//
-let destinationQuestion = document.getElementById('destination-question1');
-const destinationAnswerA = document.getElementById('destination-A');
-const destinationAnswerB = document.getElementById('destination-B');
-const destinationAnswerC = document.getElementById('destination-C');
-const destinationAnswerD = document.getElementById('destination-D');
 
 const destinationQuestions = [
     {
@@ -64,6 +60,34 @@ function setDestinationQuestion(){
 
 }
 
+// Code to get event target ID adapted from https://coreui.io/blog/how-to-get-element-id-in-javascript/
+function checkDestinationAnswer(event){
+    let a = destinationQuestions[0].answer;
+    let b;
+    if (event.target.id === "destination-A"){
+        b = 1;
+    } else if (event.target.id === "destination-B"){
+         b = 2;
+    } else if (event.target.id === "destination-C"){
+        b = 1;
+    }else if (event.target.id === "destination-D"){
+        b = 1;
+    }
+    else {
+        alert("Error No Answer Chosen");
+    }  
+
+    if (a === b){
+        alert("You Got It!");
+    } else {
+        alert("Try Again")
+    }
+}
+
 
 rulesButton.addEventListener('click', showRules);
 playButton.addEventListener('click', playGame);
+destinationAnswerA.addEventListener('click', checkDestinationAnswer);
+destinationAnswerB.addEventListener('click', checkDestinationAnswer);
+destinationAnswerC.addEventListener('click', checkDestinationAnswer);
+destinationAnswerD.addEventListener('click', checkDestinationAnswer);

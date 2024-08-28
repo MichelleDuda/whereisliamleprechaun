@@ -79,6 +79,10 @@ header {
 }
 
 /* Destination Question Styles */
+
+#destination-answers-container {
+    display: grid;
+}
 .destination-answer {
     text-align: center;
     font-size: 150%;
@@ -87,4 +91,5 @@ header {
     border: black 2px solid;
     border-radius: 20px;
     padding: 7px;
+    margin: 5px 0 5px 0;
 }
