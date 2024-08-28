@@ -35,15 +35,16 @@ header {
 }
 
 /* Introdution & Game Rules Box Styles */
-#intro-container, #game-rules-container {
+#intro-container, #game-rules-container, #destination-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#game-intro, #game-rules {
+#game-intro, #game-rules, #destination-container {
     background-color: whitesmoke;
     width: 80vw;
+    max-width: 800px;
     height: auto;
     margin-top: 20px;
     padding: 10px;
@@ -64,6 +65,10 @@ header {
     justify-content: center;
 }
 
+#intro-image {
+    border-radius: 40px;
+}
+
 #play-button, #rules-button {
     text-align: center;
     background-color: darkgreen;
@@ -72,3 +77,5 @@ header {
     border-radius: 20px;
     padding: 7px;
 }
+
+/* Destination Question Styles */
