@@ -14,6 +14,15 @@ body {
     background-size: cover;
 }
 
+header {
+    color: whitesmoke;
+    font-family: 'Nerko One', sans-serif;
+    background-color: #005a0073;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 150%;
+}
+
 main {
     margin-top: 50px;
 }
@@ -22,13 +31,13 @@ main {
 
 
 /* Introdution Box Styles */
-#intro-container {
+#intro-container, #game-rules-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#game-intro {
+#game-intro, #game-rules {
     background-color: whitesmoke;
     width: 80vw;
     height: auto;
@@ -36,6 +45,14 @@ main {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 20px 20px rgba(255, 255, 0, 0.795);
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#intro-image-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
