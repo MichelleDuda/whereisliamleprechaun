@@ -7,3 +7,35 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* General Styles */
+body {
+    background: url("../images/background.jpg");
+    background-size: cover;
+}
+
+main {
+    margin-top: 50px;
+}
+
+/* Header Styles */
+
+
+/* Introdution Box Styles */
+#intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-intro {
+    background-color: whitesmoke;
+    width: 80vw;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 20px rgba(255, 255, 0, 0.795);
+    
+
+}
