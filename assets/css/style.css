@@ -21,7 +21,7 @@ main {
 /* Style to hide divs */
 .hide {
     display: none !important;
-} 
+}
 
 
 /* Header Styles */
@@ -35,13 +35,17 @@ header {
 }
 
 /* Introdution & Game Rules Box Styles */
-#intro-container, #game-rules-container, #destination-section {
+#intro-container,
+#game-rules-container,
+#destination-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#game-intro, #game-rules, #destination-container {
+#game-intro,
+#game-rules,
+#destination-container {
     background-color: whitesmoke;
     width: 80vw;
     max-width: 800px;
@@ -55,7 +59,7 @@ header {
     text-align: center;
 }
 
-#game-rules p{
+#game-rules p {
     text-align: left;
 }
 
@@ -69,7 +73,8 @@ header {
     border-radius: 40px;
 }
 
-#play-button, #rules-button {
+#play-button,
+#rules-button {
     text-align: center;
     background-color: darkgreen;
     color: whitesmoke;
@@ -83,6 +88,7 @@ header {
 #destination-answers-container {
     display: grid;
 }
+
 .destination-answer {
     text-align: center;
     font-size: 150%;
@@ -92,4 +98,27 @@ header {
     border-radius: 20px;
     padding: 7px;
     margin: 5px 0 5px 0;
+}
+
+/* Route Styling */
+#route-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#route {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    width: 80vw;
+    max-width: 800px;
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 20px rgba(255, 255, 0, 0.795);
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }

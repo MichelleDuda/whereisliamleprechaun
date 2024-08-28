@@ -11,6 +11,8 @@ let destinationAnswerD = document.getElementById('destination-D');
 
 let destinationContainer = document.getElementById('destination-section');
 
+let routeContainer = document.getElementById('route-container');
+
 const destinationQuestions = [
     {
         question: "I can’t wait to see what we can do with that pot of gold when you get here. I’ve crafted us a wee cottage in Glenveagh National Park. On your way don’t forget to stop for some spuds. They’re on sale at the Aldi in Ballybofey.",
@@ -60,6 +62,10 @@ function setDestinationQuestion(){
 
 }
 
+function selectRoute(a){
+    routeContainer.classList.remove('hide');        
+    }
+
 // Code to get event target ID adapted from https://coreui.io/blog/how-to-get-element-id-in-javascript/
 function checkDestinationAnswer(event){
     let a = destinationQuestions[0].answer;
@@ -69,9 +75,9 @@ function checkDestinationAnswer(event){
     } else if (event.target.id === "destination-B"){
          b = 2;
     } else if (event.target.id === "destination-C"){
-        b = 1;
+        b = 3;
     }else if (event.target.id === "destination-D"){
-        b = 1;
+        b = 4;
     }
     else {
         alert("Error No Answer Chosen");
@@ -79,9 +85,11 @@ function checkDestinationAnswer(event){
 
     if (a === b){
         alert("You Got It!");
+        selectRoute(a);
     } else {
         alert("Try Again")
     }
+
 }
 
 
