@@ -10,7 +10,7 @@
 
 /* General Styles */
 body {
-    background: url("../images/background.jpg");
+    background: url("../images/background2.jpg");
     background-size: cover;
 }
 
@@ -28,10 +28,12 @@ main {
 header {
     color: whitesmoke;
     font-family: 'Nerko One', sans-serif;
-    background-color: #005a0073;
+    background-color: #005a00d3;
     letter-spacing: 2px;
     text-align: center;
     font-size: 150%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* Introdution & Game Rules Box Styles */
@@ -53,7 +55,9 @@ header {
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 0 20px 20px rgba(255, 255, 0, 0.795);
+    box-shadow: 0 0 20px 20px #005a00;
+    ;
+    ;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -117,7 +121,7 @@ header {
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px 20px rgba(255, 255, 0, 0.795);
+    box-shadow: 0 0 20px 20px #005a00;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
