@@ -39,7 +39,7 @@ header {
 /* Introdution & Game Rules Box Styles */
 #intro-container,
 #game-rules-container,
-#destination-section {
+#destination-section, #questions-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +47,7 @@ header {
 
 #game-intro,
 #game-rules,
-#destination-container {
+#destination-container, #questions-container {
     background-color: whitesmoke;
     width: 80vw;
     max-width: 800px;
@@ -56,8 +56,6 @@ header {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 20px 20px #005a00;
-    ;
-    ;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -87,13 +85,13 @@ header {
     padding: 7px;
 }
 
-/* Destination Question Styles */
+/* Destination Question & Main Questions Styles */
 
-#destination-answers-container {
+#destination-answers-container, #answers-container {
     display: grid;
 }
 
-.destination-answer {
+.destination-answer, .answer {
     text-align: center;
     font-size: 150%;
     background-color: darkgreen;
@@ -112,7 +110,7 @@ header {
 }
 
 #route {
-    display: flex;
+    display: flex; 
     flex-direction: row;
     background-color: whitesmoke;
     width: 80vw;

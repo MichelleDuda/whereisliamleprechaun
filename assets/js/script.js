@@ -10,6 +10,7 @@ let destinationAnswerD = document.getElementById('destination-D');
 
 
 let destinationContainer = document.getElementById('destination-section');
+let questionsContainer = document.getElementById('questions-section');
 
 let routeContainer = document.getElementById('route-container');
 
@@ -63,6 +64,8 @@ function setDestinationQuestion(){
 }
 
 function selectRoute(a){
+    destinationContainer.classList.add('hide');
+    questionsContainer.classList.remove('hide');
     routeContainer.classList.remove('hide');        
     }
 
