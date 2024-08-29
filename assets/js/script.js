@@ -8,6 +8,11 @@ let destinationAnswerB = document.getElementById('destination-B');
 let destinationAnswerC = document.getElementById('destination-C');
 let destinationAnswerD = document.getElementById('destination-D');
 
+let AnswerA = document.getElementById('A');
+let AnswerB = document.getElementById('B');
+let AnswerC = document.getElementById('C');
+let AnswerD = document.getElementById('D');
+
 
 let destinationContainer = document.getElementById('destination-section');
 let questionsContainer = document.getElementById('questions-section');
@@ -40,6 +45,32 @@ const destinationQuestions = [
       },
 ]
 
+//Questions for Donegal Path
+const Questions = [
+    {
+        question: "In what famous Meath castle were scenes from the movie Braveheart filmed?",
+        choices: ["Slane", "Trim", "Dunsany", "Fennor"],
+        answer: 2
+      },
+
+      {
+        question: `Louth is nicknamed the "wee" county because it is the smallest county in Ireland. How many square kilometers does County Louth cover? `,
+        choices: ["821", "521", "1284", "992"],
+        answer: 1
+      },
+
+      {
+        question: "What river flows through Monaghan town?",
+        choices: ["Dromore River", "Shannon River", "Liffey River", "Blackwater River"],
+        answer: 4
+      },
+
+      {
+        question: "What is the rock composed of in the famous County Fermanagh Marble Arch Caves?",
+        choices: ["Granite", "Marble", "Limestone", "Sandstone"],
+        answer: 3
+      },
+]
 
 
 function showRules(){
@@ -63,10 +94,20 @@ function setDestinationQuestion(){
 
 }
 
+function setRouteQuestion(){
+    document.getElementById('question1').textContent = Questions[0].question;
+    document.getElementById('A').textContent=Questions[0].choices[0];
+    document.getElementById('B').textContent=Questions[0].choices[1];
+    document.getElementById('C').textContent=Questions[0].choices[2];
+    document.getElementById('D').textContent=Questions[0].choices[3];
+
+}
+
 function selectRoute(a){
     destinationContainer.classList.add('hide');
     questionsContainer.classList.remove('hide');
-    routeContainer.classList.remove('hide');        
+    routeContainer.classList.remove('hide'); 
+    setRouteQuestion();      
     }
 
 // Code to get event target ID adapted from https://coreui.io/blog/how-to-get-element-id-in-javascript/
@@ -95,6 +136,31 @@ function checkDestinationAnswer(event){
 
 }
 
+function checkAnswer(event){
+    let a = Questions[0].answer;
+    let b;
+    if (event.target.id === "A"){
+        b = 1;
+    } else if (event.target.id === "B"){
+         b = 2;
+    } else if (event.target.id === "C"){
+        b = 3;
+    }else if (event.target.id === "D"){
+        b = 4;
+    }
+    else {
+        alert("Error No Answer Chosen");
+    }  
+
+    if (a === b){
+        alert("You Got It!");
+        selectRoute(a);
+    } else {
+        alert("Try Again")
+    }
+
+}
+
 
 rulesButton.addEventListener('click', showRules);
 playButton.addEventListener('click', playGame);
@@ -102,3 +168,8 @@ destinationAnswerA.addEventListener('click', checkDestinationAnswer);
 destinationAnswerB.addEventListener('click', checkDestinationAnswer);
 destinationAnswerC.addEventListener('click', checkDestinationAnswer);
 destinationAnswerD.addEventListener('click', checkDestinationAnswer);
+
+AnswerA.addEventListener('click', checkAnswer);
+AnswerB.addEventListener('click', checkAnswer);
+AnswerC.addEventListener('click', checkAnswer);
+AnswerD.addEventListener('click', checkAnswer);
