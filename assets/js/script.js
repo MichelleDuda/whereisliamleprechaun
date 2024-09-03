@@ -18,6 +18,7 @@ let destinationContainer = document.getElementById('destination-section');
 let questionsContainer = document.getElementById('questions-section');
 
 let routeContainer = document.getElementById('route-container');
+let energyContainer = document.getElementById('energy-container');
 
 const destinationQuestions = [
     {
@@ -106,6 +107,7 @@ function setRouteQuestion(){
 function selectRoute(a){
     destinationContainer.classList.add('hide');
     questionsContainer.classList.remove('hide');
+    energyContainer.classList.remove('hide');
     routeContainer.classList.remove('hide'); 
     setRouteQuestion();      
     }

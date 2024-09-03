@@ -102,14 +102,14 @@ header {
     margin: 5px 0 5px 0;
 }
 
-/* Route Styling */
-#route-container {
+/* Route & Energy Styling */
+#route-container, #energy-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#route {
+#route, #energy {
     display: flex; 
     flex-direction: row;
     background-color: whitesmoke;
