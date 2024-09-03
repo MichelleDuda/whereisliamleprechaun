@@ -19,6 +19,7 @@ let AnswerD = document.getElementById('D');
 
 let destinationContainer = document.getElementById('destination-section');
 let questionsContainer = document.getElementById('questions-section');
+let mainScreenContainer = document.getElementById('main-screen')
 let winContainer = document.getElementById('win-container');
 
 let routeContainer = document.getElementById('route-container');
@@ -110,9 +111,8 @@ function setRouteQuestion(){
 
 function selectRoute(a){
     destinationContainer.classList.add('hide');
-    questionsContainer.classList.remove('hide');
-    energyContainer.classList.remove('hide');
-    routeContainer.classList.remove('hide'); 
+    mainScreenContainer.classList.remove('hide');
+    routeContainer.classList.remove('hide');
     setRouteQuestion();      
     }
 

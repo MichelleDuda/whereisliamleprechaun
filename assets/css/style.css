@@ -36,10 +36,18 @@ header {
     padding-bottom: 10px;
 }
 
+
+/* Main Game Screen Styles */
+#main-screen {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* Introdution & Game Rules Box Styles */
 #intro-container,
 #game-rules-container,
-#destination-section, #questions-section {
+#destination-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +55,7 @@ header {
 
 #game-intro,
 #game-rules,
-#destination-container, #questions-container {
+#destination-container, #county-information {
     background-color: whitesmoke;
     width: 80vw;
     max-width: 800px;
@@ -59,6 +67,10 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#county-information, #energy-container {
+    max-width: 200px;
 }
 
 #game-rules p {
@@ -85,7 +97,29 @@ header {
     padding: 7px;
 }
 
+/* Main Screen Sub-Container Styling */
+#questions-section, #county-information-container, #energy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 20px auto 20px;
+}
+
 /* Destination Question & Main Questions Styles */
+
+#questions-container {
+    background-color: whitesmoke;
+    width: 80vw;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 20px #005a00;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 #destination-answers-container, #answers-container {
     display: grid;
@@ -109,12 +143,29 @@ header {
     align-items: center;
 }
 
-#route, #energy {
+#route {
     display: flex; 
     flex-direction: row;
+    flex-wrap: wrap;
     background-color: whitesmoke;
     width: 80vw;
     max-width: 800px;
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 20px #005a00;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+#energy {
+    display: flex; 
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 80vw;
+    max-width: 200px;
     height: auto;
     margin-top: 20px;
     padding: 20px;
