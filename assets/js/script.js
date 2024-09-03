@@ -1,3 +1,5 @@
+let currentLocation = 0;
+
 let introContainer = document.getElementById('intro-container');
 let gameRulesContainer = document.getElementById('game-rules-container');
 let rulesButton = document.getElementById('rules-button');
@@ -96,11 +98,11 @@ function setDestinationQuestion(){
 }
 
 function setRouteQuestion(){
-    document.getElementById('question1').textContent = Questions[0].question;
-    document.getElementById('A').textContent=Questions[0].choices[0];
-    document.getElementById('B').textContent=Questions[0].choices[1];
-    document.getElementById('C').textContent=Questions[0].choices[2];
-    document.getElementById('D').textContent=Questions[0].choices[3];
+    document.getElementById('question1').textContent = Questions[currentLocation].question;
+    document.getElementById('A').textContent=Questions[currentLocation].choices[0];
+    document.getElementById('B').textContent=Questions[currentLocation].choices[1];
+    document.getElementById('C').textContent=Questions[currentLocation].choices[2];
+    document.getElementById('D').textContent=Questions[currentLocation].choices[3];
 
 }
 
@@ -139,7 +141,7 @@ function checkDestinationAnswer(event){
 }
 
 function checkAnswer(event){
-    let a = Questions[0].answer;
+    let a = Questions[currentLocation].answer;
     let b;
     if (event.target.id === "A"){
         b = 1;
@@ -156,7 +158,13 @@ function checkAnswer(event){
 
     if (a === b){
         alert("You Got It!");
-        selectRoute(a);
+        ++currentLocation;
+        if (currentLocation <5){
+        setRouteQuestion();
+        } else{
+            questionnsContainer.classList.add('hide');
+            winContainer.classList.remove('hide');
+        }
     } else {
         alert("Try Again")
     }
