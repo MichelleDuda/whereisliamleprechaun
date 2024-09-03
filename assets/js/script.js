@@ -1,4 +1,5 @@
 let currentLocation = 0;
+let energy = 3;
 
 let introContainer = document.getElementById('intro-container');
 let gameRulesContainer = document.getElementById('game-rules-container');
@@ -18,6 +19,7 @@ let AnswerD = document.getElementById('D');
 
 let destinationContainer = document.getElementById('destination-section');
 let questionsContainer = document.getElementById('questions-section');
+let winContainer = document.getElementById('win-container');
 
 let routeContainer = document.getElementById('route-container');
 let energyContainer = document.getElementById('energy-container');
@@ -159,16 +161,24 @@ function checkAnswer(event){
     if (a === b){
         alert("You Got It!");
         ++currentLocation;
-        if (currentLocation <5){
+        if (currentLocation <4){
         setRouteQuestion();
         } else{
-            questionnsContainer.classList.add('hide');
+            questionsContainer.classList.add('hide');
             winContainer.classList.remove('hide');
         }
     } else {
-        alert("Try Again")
+        decrementEnergy();
+        if (energy === 0) {
+            alert("Game Over");
+        } else
+        alert("Try Again");
     }
 
+}
+
+function decrementEnergy(){
+    --energy;
 }
 
 
