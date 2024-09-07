@@ -136,6 +136,15 @@ header {
     margin: 5px 0 5px 0;
 }
 
+#hints {
+    display: flex;
+    justify-content: center;
+}
+
+#hints div {
+    margin: 0 10px;
+}
+
 /* Route & Energy Styling */
 #route-container, #energy-container {
     display: flex;
