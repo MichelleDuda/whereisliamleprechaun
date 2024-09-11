@@ -6,11 +6,6 @@ let gameRulesContainer = document.getElementById('game-rules-container');
 let rulesButton = document.getElementById('rules-button');
 let playButton = document.getElementById('play-button');
 
-let destinationAnswerA = document.getElementById('destination-A');
-let destinationAnswerB = document.getElementById('destination-B');
-let destinationAnswerC = document.getElementById('destination-C');
-let destinationAnswerD = document.getElementById('destination-D');
-
 let AnswerA = document.getElementById('A');
 let AnswerB = document.getElementById('B');
 let AnswerC = document.getElementById('C');
@@ -24,7 +19,6 @@ let audio2 = document.getElementById('hint2-audio');
 let audio3 = document.getElementById('hint3-audio');
 
 
-let destinationContainer = document.getElementById('destination-section');
 let questionsContainer = document.getElementById('questions-section');
 let mainScreenContainer = document.getElementById('main-screen')
 let winContainer = document.getElementById('win-container');
@@ -34,53 +28,41 @@ let energyContainer = document.getElementById('energy-container');
 
 
 const route = ['meath', 'waterford', 'cork', 'kerry', 'donegal']
-const destinationQuestions = [{
-        question: "I can’t wait to see what we can do with that pot of gold when you get here. I’ve crafted us a wee cottage in Glenveagh National Park. On your way don’t forget to stop for some spuds. They’re on sale at the Aldi in Ballybofey.",
-        choices: ["Mayo", "Donegal", "Kerry", "Waterford"],
-        answer: 2
-    },
-
-    {
-        question: "I’ve found a quiet wee spot for us in what’s left of one of the old servant cottages at Moore Hall. Perhaps when you arrive with all that gold we can holiday in Achill for a spell.    ",
-        choices: ["Mayo", "Donegal", "Kerry", "Waterford"],
-        answer: 1
-    },
-
-    {
-        question: "I’ll meet you on the island where Betelgeuse exploded in 1979 claiming the lives of 51 souls. After that maybe we can scoot on over to Inchydoney for a dip in the sea.",
-        choices: ["Wexford", "Galway", "Donegal", "Cork"],
-        answer: 4
-    },
-
-    {
-        question: "I’ve been around the “ring” a time or two already but have decided to settle down in a small farming town near the Shannon. Hurry up and get here soon. The Rose festival is about to begin.",
-        choices: ["Cavan", "Tipperarry", "Kerry", "Kildare"],
-        answer: 3
-    },
-]
 
 //Questions for Donegal Path
 const Questions = [{
-        question: "In what famous Meath castle were scenes from the movie Braveheart filmed?",
-        choices: ["Slane", "Trim", "Dunsany", "Fennor"],
+        hints: ["My cousin Danny said he saw him visiting the ancient ruins where the high kings once ruled.", 
+            "I met him just the other day. I told him I hate history class and he said he loved it. In fact, he was heading out to see some ancient tomb older than the pyramids of Giza.",
+            "He was rambling on about a magical stone on a Hill. Thought if he could go there he'd be granted kingship.",
+        ],
+        choices: ["Roscommon", "Meath", "Wexford", "Carlow"],
         answer: 2
     },
 
     {
-        question: `Louth is nicknamed the "wee" county because it is the smallest county in Ireland. How many square kilometers does County Louth cover? `,
-        choices: ["821", "521", "1284", "992"],
+        hints: ["He told me he was headed to Ireland's oldest city to see if any Viking ships were still there.", 
+            "He was asking a lot of questions about crystal. Maybe he's planning anohter heist somewhere.",
+            "I'm not sure where he went, but he was asking me if I knew where some guy named Reginald lived. He said it was some old tower but I had no idea what he was talking about.",
+        ],
+        choices: ["Waterford", "Wexford", "Wicklow", "Tipperary"],
         answer: 1
     },
 
     {
-        question: "What river flows through Monaghan town?",
-        choices: ["Dromore River", "Shannon River", "Liffey River", "Blackwater River"],
+        hints: ["He was rambling on and on and on about kissing a magical stone meant to bestow upon him the gift of the gab. It didn't sound to me like he needed that.", 
+            "He asked for directions to a famous harbor where the Titanic had set sail.",
+            "He asked if I wanted to come with him. He was headed for a walk over a bridge where the cliffs meet the sea in a dramatic clash at the most south-westerly point in the country. I told him no; I'm afraid of heights. ",
+        ],
+        choices: ["Mayo", "Kerry", "Sligo", "Cork"],
         answer: 4
     },
 
     {
-        question: "What is the rock composed of in the famous County Fermanagh Marble Arch Caves?",
-        choices: ["Granite", "Marble", "Limestone", "Sandstone"],
+        hints: ["He mentioned trying to slip away into the natural wonders of the forest and maybe take a horse-drawn carriage ride to the 1840s home of Henry Arthur Herbert.", 
+            "I heard him talking about heading out to see the ring. Perhaps there's a lucky soon to be Mrs. Leprechaun.",
+            "He told me he was headed out to see King Puck before he ventured on to the Slea Head Drive.",
+        ],
+        choices: ["Galway", "Donegal", "Kerry", "Leitrim"],
         answer: 3
     },
 ]
@@ -94,33 +76,20 @@ function showRules() {
 function playGame() {
     introContainer.classList.add('hide');
     gameRulesContainer.classList.add('hide');
-    destinationContainer.classList.remove('hide');
-    setDestinationQuestion();
+    mainScreenContainer.classList.remove('hide');
+    questionsContainer.classList.remove('hide');
+    energyContainer.classList.remove('hide');
+    setRouteQuestion();
 }
 
-function setDestinationQuestion() {
-    document.getElementById('destination-question1').textContent = destinationQuestions[0].question;
-    document.getElementById('destination-A').textContent = destinationQuestions[0].choices[0];
-    document.getElementById('destination-B').textContent = destinationQuestions[0].choices[1];
-    document.getElementById('destination-C').textContent = destinationQuestions[0].choices[2];
-    document.getElementById('destination-D').textContent = destinationQuestions[0].choices[3];
-
-}
 
 function setRouteQuestion() {
-    document.getElementById('question1').textContent = Questions[currentLocation].question;
+    document.getElementById('hint-text').textContent = Questions[currentLocation].hints;
     document.getElementById('A').textContent = Questions[currentLocation].choices[0];
     document.getElementById('B').textContent = Questions[currentLocation].choices[1];
     document.getElementById('C').textContent = Questions[currentLocation].choices[2];
     document.getElementById('D').textContent = Questions[currentLocation].choices[3];
 
-}
-
-function selectRoute(a) {
-    destinationContainer.classList.add('hide');
-    mainScreenContainer.classList.remove('hide');
-    routeContainer.classList.remove('hide');
-    setRouteQuestion();
 }
 
 // Code to get event target ID adapted from https://coreui.io/blog/how-to-get-element-id-in-javascript/
@@ -137,36 +106,11 @@ function playHint(event) {
     } else if (event.target.id === 'hint3-image') {
         audio3.src = `assets/audio/${route[currentLocation]}-hint3.mp3`;
         console.log(audio3.src);
-        audio2.play();
+        audio3.play();
     } else {
         alert("No Hint");
     }
 
-
-}
-
-// Code to get event target ID adapted from https://coreui.io/blog/how-to-get-element-id-in-javascript/
-function checkDestinationAnswer(event) {
-    let a = destinationQuestions[0].answer;
-    let b;
-    if (event.target.id === "destination-A") {
-        b = 1;
-    } else if (event.target.id === "destination-B") {
-        b = 2;
-    } else if (event.target.id === "destination-C") {
-        b = 3;
-    } else if (event.target.id === "destination-D") {
-        b = 4;
-    } else {
-        alert("Error No Answer Chosen");
-    }
-
-    if (a === b) {
-        alert("You Got It!");
-        selectRoute(a);
-    } else {
-        alert("Try Again")
-    }
 
 }
 
@@ -211,10 +155,6 @@ function decrementEnergy() {
 
 rulesButton.addEventListener('click', showRules);
 playButton.addEventListener('click', playGame);
-destinationAnswerA.addEventListener('click', checkDestinationAnswer);
-destinationAnswerB.addEventListener('click', checkDestinationAnswer);
-destinationAnswerC.addEventListener('click', checkDestinationAnswer);
-destinationAnswerD.addEventListener('click', checkDestinationAnswer);
 
 AnswerA.addEventListener('click', checkAnswer);
 AnswerB.addEventListener('click', checkAnswer);
