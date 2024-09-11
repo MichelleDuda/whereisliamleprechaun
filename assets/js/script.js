@@ -84,7 +84,7 @@ function playGame() {
 
 
 function setRouteQuestion() {
-    document.getElementById('hint-text').textContent = Questions[currentLocation].hints;
+    document.getElementById('hint-text').textContent = "";
     document.getElementById('A').textContent = Questions[currentLocation].choices[0];
     document.getElementById('B').textContent = Questions[currentLocation].choices[1];
     document.getElementById('C').textContent = Questions[currentLocation].choices[2];
@@ -96,14 +96,17 @@ function setRouteQuestion() {
 function playHint(event) {
     console.log(event.target.id);
     if (event.target.id === 'hint1-image') {
+        document.getElementById('hint-text').textContent = Questions[currentLocation].hints[0];
         audio1.src = `assets/audio/${route[currentLocation]}-hint1.mp3`;
         console.log(audio1.src);
         audio1.play();
     } else if (event.target.id === 'hint2-image') {
+        document.getElementById('hint-text').textContent = Questions[currentLocation].hints[1];
         audio2.src = `assets/audio/${route[currentLocation]}-hint2.mp3`;
         console.log(audio2.src);
         audio2.play();
     } else if (event.target.id === 'hint3-image') {
+        document.getElementById('hint-text').textContent = Questions[currentLocation].hints[2];
         audio3.src = `assets/audio/${route[currentLocation]}-hint3.mp3`;
         console.log(audio3.src);
         audio3.play();
