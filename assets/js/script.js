@@ -11,6 +11,7 @@ let AnswerB = document.getElementById('B');
 let AnswerC = document.getElementById('C');
 let AnswerD = document.getElementById('D');
 
+let questionNumber = document.getElementById('question-number');
 let hint1 = document.getElementById('hint1');
 let hint2 = document.getElementById('hint2');
 let hint3 = document.getElementById('hint3');
@@ -84,6 +85,7 @@ function playGame() {
 
 
 function setRouteQuestion() {
+    document.getElementById('question-number').innerText = `Question ${currentLocation + 1}`;
     document.getElementById('hint-text').textContent = "";
     document.getElementById('A').textContent = Questions[currentLocation].choices[0];
     document.getElementById('B').textContent = Questions[currentLocation].choices[1];
