@@ -19,6 +19,11 @@ let audio1 = document.getElementById('hint1-audio');
 let audio2 = document.getElementById('hint2-audio');
 let audio3 = document.getElementById('hint3-audio');
 
+let image1 = document.getElementById('stop1-image');
+let image2 = document.getElementById('stop2-image');
+let image3 = document.getElementById('stop3-image');
+let image4 = document.getElementById('stop4-image');
+let image5 = document.getElementById('stop5-image');
 
 let questionsContainer = document.getElementById('questions-section');
 let mainScreenContainer = document.getElementById('main-screen')
@@ -80,6 +85,7 @@ function playGame() {
     mainScreenContainer.classList.remove('hide');
     questionsContainer.classList.remove('hide');
     energyContainer.classList.remove('hide');
+    routeContainer.classList.remove('hide');
     setRouteQuestion();
 }
 
@@ -137,9 +143,11 @@ function checkAnswer(event) {
     if (a === b) {
         alert("You Got It!");
         ++currentLocation;
-        if (currentLocation < 4) {
+        if (currentLocation < 5) {
+            updateRoute();
             setRouteQuestion();
         } else {
+            updateRoute();
             questionsContainer.classList.add('hide');
             winContainer.classList.remove('hide');
         }
@@ -152,6 +160,29 @@ function checkAnswer(event) {
     }
 
 }
+
+function updateRoute(){
+    console.log(currentLocation);
+    if (currentLocation === 1) {
+        image1.src = `assets/images/${route[currentLocation-1]}.jpg`;
+        console.log(image1.src);
+}else if (currentLocation === 2) {
+    image2.src = `assets/images/${route[currentLocation-1]}.jpg`;
+    console.log(image2.src);
+} else if (currentLocation === 3) {
+    image3.src = `assets/images/${route[currentLocation-1]}.jpg`;
+    console.log(image3.src);
+} else if (currentLocation === 4) {
+    image4.src = `assets/images/${route[currentLocation-1]}.jpg`;
+    console.log(image4.src);
+} else if (currentLocation === 5) {
+    image5.src = `assets/images/${route[currentLocation-1]}.jpg`;
+    console.log(image5.src);
+} else{
+    console.log('error');
+}
+}
+
 
 function decrementEnergy() {
     --energy;
