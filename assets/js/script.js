@@ -1,5 +1,5 @@
 let currentLocation = 0;
-let energy = 3;
+let currentEnergy = 2;
 
 let introContainer = document.getElementById('intro-container');
 let gameRulesContainer = document.getElementById('game-rules-container');
@@ -31,6 +31,7 @@ let winContainer = document.getElementById('win-container');
 
 let routeContainer = document.getElementById('route-container');
 let energyContainer = document.getElementById('energy-container');
+let energyRemaining = document.getElementById('energy-remaining');
 
 
 const route = ['meath', 'waterford', 'cork', 'kerry', 'donegal']
@@ -152,6 +153,8 @@ function checkAnswer(event) {
     if (a === b) {
         alert("You Got It!");
         ++currentLocation;
+        ++currentEnergy;
+        updateEnergy();
         if (currentLocation < 5) {
             updateRoute();
             setRouteQuestion();
@@ -161,13 +164,21 @@ function checkAnswer(event) {
             winContainer.classList.remove('hide');
         }
     } else {
-        decrementEnergy();
-        if (energy === 0) {
+        --currentEnergy;
+        updateEnergy();
+        if (currentEnergy === 0) {
             alert("Game Over");
         } else
             alert("Try Again");
     }
 
+}
+
+function updateEnergy(){
+    let energyHeight= 180 - (currentEnergy*20);
+    console.log(energyHeight);
+    energyRemaining.style.height = `${energyHeight}px`;
+    console.log(currentEnergy);
 }
 
 function updateRoute(){

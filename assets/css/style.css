@@ -175,7 +175,7 @@ header {
     background-color: whitesmoke;
     width: 80vw;
     max-width: 200px;
-    height: auto;
+    height: 400px;
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -183,4 +183,16 @@ header {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+}
+
+#energy-tank {
+    height: 180px;
+    width: 75px;
+    border: solid 2px black;
+    background-image: url(../images/energy.jpg);
+}
+
+#energy-remaining {
+    height: 160px;
+    background-color: white;
 }
