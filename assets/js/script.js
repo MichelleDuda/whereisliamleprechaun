@@ -7,6 +7,7 @@ let introContainer = document.getElementById('intro-container');
 let gameRulesContainer = document.getElementById('game-rules-container');
 let rulesButton = document.getElementById('rules-button');
 let playButton = document.getElementById('play-button');
+let playAgainButton = document.getElementById('play-again-button');
 let nextCountyButton = document.getElementById('nextCounty-button');
 let tryAgainButton = document.getElementById('tryAgain-button');
 
@@ -43,7 +44,7 @@ let energyRemaining = document.getElementById('energy-remaining');
 
 const route = ['meath', 'waterford', 'cork', 'kerry', 'donegal']
 
-//Questions for Donegal Path
+//Questions
 const Questions = [{
         hints: ["My cousin Danny said he saw him visiting the ancient ruins where the high kings once ruled.", 
             "I met him just the other day. I told him I hate history class and he said he loved it. In fact, he was heading out to see some ancient tomb older than the pyramids of Giza.",
@@ -96,6 +97,18 @@ function showRules() {
     gameRulesContainer.classList.remove('hide');
 }
 
+function resetGame(){
+    currentLocation = 0;
+    currentEnergy = 2;
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+    updateEnergy();
+    updateStats();
+    updateRoute();
+    winContainer.classList.add('hide');
+    playGame();
+}
+
 function playGame() {
     introContainer.classList.add('hide');
     gameRulesContainer.classList.add('hide');
@@ -110,8 +123,9 @@ function setRouteQuestion() {
     mainScreenContainer.classList.remove('hide');
     correctAnswerContainer.classList.add('hide');
     incorrectAnswerContainer.classList.add('hide');
-    updateRoute();
-    if(currentLocation<5){
+    if(currentEnergy <1){
+        alert("Game Over!");
+    } else if(currentLocation<5){
     document.getElementById('question-number').innerText = `Question ${currentLocation + 1}`;
     document.getElementById('hint-text').textContent = "";
     document.getElementById('A').textContent = Questions[currentLocation].choices[0];
@@ -165,22 +179,27 @@ function checkAnswer(event) {
     }
 
     if (a === b) {
-        correctAnswerContainer.classList.remove('hide');
-        mainScreenContainer.classList.add('hide');
         ++currentLocation;
         ++currentEnergy;
         ++correctAnswers;
+        updateRoute();
         updateEnergy();
         updateStats();
+        if (currentLocation<5){
+            correctAnswerContainer.classList.remove('hide');
+            mainScreenContainer.classList.add('hide');
+        } else {
+            winContainer.classList.remove('hide');
+            mainScreenContainer.classList.add('hide');
+        }
+
     } else {
+        incorrectAnswerContainer.classList.remove('hide');
+        mainScreenContainer.classList.add('hide');
         --currentEnergy;
         ++incorrectAnswers;
         updateEnergy();
         updateStats();
-        if (currentEnergy === 0) {
-            alert("Game Over");
-        } else
-            alert("Try Again");
     }
 
 }
@@ -228,6 +247,8 @@ function decrementEnergy() {
 rulesButton.addEventListener('click', showRules);
 playButton.addEventListener('click', playGame);
 nextCountyButton.addEventListener ('click', setRouteQuestion);
+tryAgainButton.addEventListener ('click', setRouteQuestion);
+playAgainButton.addEventListener('click', resetGame);
 
 AnswerA.addEventListener('click', checkAnswer);
 AnswerB.addEventListener('click', checkAnswer);
