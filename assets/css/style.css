@@ -47,7 +47,7 @@ header {
 /* Introdution & Game Rules Box Styles */
 #intro-container,
 #game-rules-container,
-#destination-section {
+#destination-section, #correct-answer-container, #incorrect-answer-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@ header {
 
 #game-intro,
 #game-rules,
-#destination-container, #stats-container {
+#destination-container, #stats-container, #correct-answer, #incorrect-answer {
     background-color: whitesmoke;
     width: 80vw;
     max-width: 800px;
@@ -88,7 +88,7 @@ header {
 }
 
 #play-button,
-#rules-button {
+#rules-button, #nextCounty-button, #tryAgain-button {
     text-align: center;
     background-color: darkgreen;
     color: whitesmoke;

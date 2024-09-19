@@ -7,6 +7,8 @@ let introContainer = document.getElementById('intro-container');
 let gameRulesContainer = document.getElementById('game-rules-container');
 let rulesButton = document.getElementById('rules-button');
 let playButton = document.getElementById('play-button');
+let nextCountyButton = document.getElementById('nextCounty-button');
+let tryAgainButton = document.getElementById('tryAgain-button');
 
 let AnswerA = document.getElementById('A');
 let AnswerB = document.getElementById('B');
@@ -28,7 +30,9 @@ let image4 = document.getElementById('stop4-image');
 let image5 = document.getElementById('stop5-image');
 
 let questionsContainer = document.getElementById('questions-section');
-let mainScreenContainer = document.getElementById('main-screen')
+let mainScreenContainer = document.getElementById('main-screen');
+let correctAnswerContainer = document.getElementById('correct-answer-container');
+let incorrectAnswerContainer = document.getElementById('incorrect-answer-container');
 let winContainer = document.getElementById('win-container');
 
 let routeContainer = document.getElementById('route-container');
@@ -95,7 +99,6 @@ function showRules() {
 function playGame() {
     introContainer.classList.add('hide');
     gameRulesContainer.classList.add('hide');
-    mainScreenContainer.classList.remove('hide');
     questionsContainer.classList.remove('hide');
     energyContainer.classList.remove('hide');
     routeContainer.classList.remove('hide');
@@ -104,13 +107,21 @@ function playGame() {
 
 
 function setRouteQuestion() {
+    mainScreenContainer.classList.remove('hide');
+    correctAnswerContainer.classList.add('hide');
+    incorrectAnswerContainer.classList.add('hide');
+    updateRoute();
+    if(currentLocation<5){
     document.getElementById('question-number').innerText = `Question ${currentLocation + 1}`;
     document.getElementById('hint-text').textContent = "";
     document.getElementById('A').textContent = Questions[currentLocation].choices[0];
     document.getElementById('B').textContent = Questions[currentLocation].choices[1];
     document.getElementById('C').textContent = Questions[currentLocation].choices[2];
     document.getElementById('D').textContent = Questions[currentLocation].choices[3];
-
+    } else {
+        questionsContainer.classList.add('hide');
+        winContainer.classList.remove('hide');
+        }
 }
 
 // Code to get event target ID adapted from https://coreui.io/blog/how-to-get-element-id-in-javascript/
@@ -154,20 +165,13 @@ function checkAnswer(event) {
     }
 
     if (a === b) {
-        alert("You Got It!");
+        correctAnswerContainer.classList.remove('hide');
+        mainScreenContainer.classList.add('hide');
         ++currentLocation;
         ++currentEnergy;
         ++correctAnswers;
         updateEnergy();
         updateStats();
-        if (currentLocation < 5) {
-            updateRoute();
-            setRouteQuestion();
-        } else {
-            updateRoute();
-            questionsContainer.classList.add('hide');
-            winContainer.classList.remove('hide');
-        }
     } else {
         --currentEnergy;
         ++incorrectAnswers;
@@ -223,6 +227,7 @@ function decrementEnergy() {
 
 rulesButton.addEventListener('click', showRules);
 playButton.addEventListener('click', playGame);
+nextCountyButton.addEventListener ('click', setRouteQuestion);
 
 AnswerA.addEventListener('click', checkAnswer);
 AnswerB.addEventListener('click', checkAnswer);
@@ -232,3 +237,4 @@ AnswerD.addEventListener('click', checkAnswer);
 hint1.addEventListener('click', playHint);
 hint2.addEventListener('click', playHint);
 hint3.addEventListener('click', playHint);
+
