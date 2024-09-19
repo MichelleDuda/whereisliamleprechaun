@@ -1,5 +1,7 @@
 let currentLocation = 0;
 let currentEnergy = 2;
+let correctAnswers = 0;
+let incorrectAnswers = 0;
 
 let introContainer = document.getElementById('intro-container');
 let gameRulesContainer = document.getElementById('game-rules-container');
@@ -32,6 +34,7 @@ let winContainer = document.getElementById('win-container');
 let routeContainer = document.getElementById('route-container');
 let energyContainer = document.getElementById('energy-container');
 let energyRemaining = document.getElementById('energy-remaining');
+
 
 
 const route = ['meath', 'waterford', 'cork', 'kerry', 'donegal']
@@ -154,7 +157,9 @@ function checkAnswer(event) {
         alert("You Got It!");
         ++currentLocation;
         ++currentEnergy;
+        ++correctAnswers;
         updateEnergy();
+        updateStats();
         if (currentLocation < 5) {
             updateRoute();
             setRouteQuestion();
@@ -165,13 +170,20 @@ function checkAnswer(event) {
         }
     } else {
         --currentEnergy;
+        ++incorrectAnswers;
         updateEnergy();
+        updateStats();
         if (currentEnergy === 0) {
             alert("Game Over");
         } else
             alert("Try Again");
     }
 
+}
+
+function updateStats(){
+    document.getElementById('correctAnswers').textContent = correctAnswers;
+    document.getElementById('incorrectAnswers').textContent = incorrectAnswers;
 }
 
 function updateEnergy(){

@@ -55,7 +55,7 @@ header {
 
 #game-intro,
 #game-rules,
-#destination-container, #county-information {
+#destination-container, #stats-container {
     background-color: whitesmoke;
     width: 80vw;
     max-width: 800px;
@@ -69,7 +69,7 @@ header {
     text-align: center;
 }
 
-#county-information, #energy-container {
+#stats-container, #energy-container {
     max-width: 200px;
 }
 
@@ -98,7 +98,7 @@ header {
 }
 
 /* Main Screen Sub-Container Styling */
-#questions-section, #county-information-container, #energy-container {
+#questions-section, #stats-container, #energy-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,7 +160,7 @@ header {
     width: 80vw;
     max-width: 800px;
     height: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px 20px #005a00;
