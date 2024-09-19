@@ -1,131 +1,223 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Where in Ireland is Liam the Leprechaun Game
 
-Welcome Michelle Kelly,
+![Where in Ireland is Liam the Leprechaun](documentation/liamtheleprechaungame.jpg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Index - Table of Contents
+* [Introduction](#introduction)
+* [User Experience (UX)](#user-experience-ux) 
+    * [Site Goals](#site-goals) 
+* [Design](#design)
+    * [Colour](#colour)
+    * [Fonts](#fonts)
+    * [Wireframes](#wireframes)
+* [Features](#features)
+    * [Introduction](#Introdcution)
+* [Technologies Used](#technologies-used)
+    * [Languages](#languages)
+    * [Frameworks, Libraries and Programs Used](#frameworks-libraries--programs-used)
+* [Testing](#testing)
+    * [Validator Testing](#validator-testing)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Additional Manual Testing](#additional-manual-testing)
+    * [Browser Compatibility](#browser-compatibility)
+    * [Bugs](#bugs)
+    * [Known Bugs](#known-bugs)
+* [Deployment](#deployment)
+    * [How This Site Was Deployed](#how-this-site-was-deployed)
+* [Credits](#credits)
+    * [Photos](#photos)
+    * [Code](#code)
+    * [Acknowledgments](#acknowledgments)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
 
-## Gitpod Reminders
+## Introduction
+Where in Ireland is Liam the Leprechaun is an educational game aimed at teaching children facts about the counties of Ireland. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The overall goal of this game is help find Liam the Leprechaun who has absconded from Dublin with the legendary pot of gold from beneath the magical rainbow. The user will start their journey in Dublin where they will encounter witnesses bearing clues as to which county Liam traveled to next. With each correct response the user moves a step closer to Liam and recovering the pot of gold. 
 
-`python3 -m http.server`
+The game targets primary school children who are looking to learn and test thier knowledge of Ireland. However, older children and adults could also play!   
 
-A blue button should appear to click: _Make Public_,
+## User Experience (UX)
 
-Another blue button should appear to click: _Open Browser_.
+### Site Goals
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+  #### Site Owner Goals
+  As the site owner, I want to:
+  - 
 
-A blue button should appear to click: _Make Public_,
+  #### User Goals
+  As a User, I want to:
+  - 
 
-Another blue button should appear to click: _Open Browser_.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Design
 
-To log into the Heroku toolbelt CLI:
+### Colour
+The colour scheme for this website is mainly green with black and white accents. The green colour was extracted from the background image using Microsoft Paint andused throughout the site. The colour scheme helps to provide a vibrant site that reminds the user of Ireland. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<img src="documentation/colorpallete.jpg">
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Fonts
+Google Fonts was used to import the Nerko One and Raleway fonts. These were chosen as they complement each other well and have a simple and playful aesthetic. 
 
-### Connecting your Mongo database
+### Wireframes
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+<details><summary>Introduction Screen</summary>
+<img src="documentation/wireframes/mobile-phone-home.png">
+<img src="documentation/wireframes/tablet-home.png">
+<img src="documentation/wireframes/laptop-home.png">
+</details>
+<details><summary>Main Play Screen</summary>
+<img src="documentation/wireframes/mobile-phone-menu.png">
+<img src="documentation/wireframes/tablet-menu.png">
+<img src="documentation/wireframes/laptop-menu.png">
+</details>
+<details><summary>Correct/Incorrect Answer Screen</summary>
+<img src="documentation/wireframes/mobile-phone-contact.png">
+<img src="documentation/wireframes/tablet-contact.png">
+<img src="documentation/wireframes/laptop-contact.png">
+</details>
+<details><summary>Game Win Screen</summary>
+<img src="documentation/wireframes/mobile-phone-confirmation.png">
+<img src="documentation/wireframes/tablet-confirmation.png">
+<img src="documentation/wireframes/laptop-confirmation.png">
+</details>
 
-------
 
-## Release History
+## Features
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Introdcution
+- 
+<img src="documentation/navigationbar-small.jpg">
 
-**June 18, 2024,** Add Mongo back into template
+### How to Play Section
+- 
+<img src="documentation/landingimage.jpg">
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+### Main Question Display
+- 
+<img src="documentation/aboutus.jpg">
 
-**May 28 2024:** Fix Mongo and Links installs
+### Fuel Guage
+- 
 
-**April 26 2024:** Update node version to 16
+<img src="documentation/footer.jpg">
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Route 
+-  
+<img src="documentation/contactheading.jpg">
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Feedback Dispalys
+- 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<img src="documentation/menupage.jpg">
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Current Statistics
+- 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<img src="documentation/contactus.jpg">
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Future Features
+- 
+## Technologies Used
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Languages
+- HTML
+- CSS
+- Javascript
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Frameworks, Libraries & programs Used
+- [Google Fonts](https://fonts.google.com) was used for the fonts: Oswald and Lato.
+- [Font Awesome](https://fontawesome.com/) was used for various icons in the footer and headings of the pages. 
+- [Balsamiq](https://balsamiq.com/) was used to create the wireframes.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Testing
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Validator Testing
+- [HTML Validator](https://validator.w3.org/)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  - Result for index.html
+      ![HTML results index](documentation/validation-results/validation-no-error.jpg)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  - Full Validation Results available:
+    - <a href="https://github.com/michelleduda/scoops-ice-cream/blob/main/documentation/validation-results/html-validation-index.pdf" target="_blank">HTML Results - Home Page</a>
+ 
+- [CSS Validator](https://jigsaw.w3.org/css-validator)
+  - Result for style.css
+      ![CSS results](documentation/validation-results/css-no-errors.jpg)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+  - Full Validation Results available:
+    - <a href="https://github.com/michelleduda/scoops-ice-cream/blob/main/documentation/validation-results/css-validation-results.pdf" target="_blank">CSS Results</a>
 
-------
+- [Javascript Validator](https://jigsaw.w3.org/css-validator)
+  - Result for script.js
+      ![Javascript results](documentation/validation-results/css-no-errors.jpg)
 
-## FAQ about the uptime script
+  - Full Validation Results available:
+    - <a href="https://github.com/michelleduda/scoops-ice-cream/blob/main/documentation/validation-results/css-validation-results.pdf" target="_blank">CSS Results</a>    
 
-**Why have you added this script?**
+### Lighthouse Testing
+- Lighthouse result for index.html
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    ![Lighthouse results index](documentation/lighthouse/lighthouse_index.jpg)
+- Lighthouse result for menu.html
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Additional Manual Testing
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Browser Compatibility
+This website was tested on the following browsers:
+- Google Chrome Version 127.0.6533.89 (Official Build) (64-bit)
+- Microsoft Edge Version 127.0.2651.86 (Official build) (64-bit)
+- Mozilla Firefox Version 128.0.3 (64-bit)
 
-**So….?**
+### Bugs
+1. 
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Known Bugs
+There are no unaddressed known bugs at this time. 
 
-**Can I opt out?**
+## Deployment
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### How This Site Was Deployed
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+This site was deployed via GitHub
+1. Log into [GitHub](https://github.com).
+2. Navigate to the repository [MichelleDuda/whereisliamleprechaun](https://github.com/MichelleDuda/whereisliamleprechaun).
+3. Navigate to the [Settings Tab](https://github.com/MichelleDuda/whereisliamleprechaun/settings).
+4. Click on the [Pages](https://github.com/MichelleDuda/whereisliamleprechaun/settings/pages) option in the left-hand pane. 
+5. Select the main branch from the source dropdown menu.
+6. Once the main branch has been selected the page will refresh automatically with a ribbon displaying that the deployment has been successful.
+7. Any changes pushed to the main branch will now take effect in the live project. 
 
-**Anything more?**
+Link to the live project: [Where is Ireland is Liam the Leprechaun](https://michelleduda.github.io/whereisliamleprechaun/index.html)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### How to Clone the Repository
 
----
+To Clone this repository:
+1. Navigate to [https://github.com/MichelleDuda/whereisliamleprechaun](https://github.com/MichelleDuda/whereisliamleprechaun).
+2. Click on the "<> Code" button.
+3. Copy the URL for the repository using HTTPS, SSH, or GitHub CLI. 
+4. Open Git Bash.
+5. Change the working directory to the location you want to clone the directory to. 
+6. Type git clone and paste the URL that was copied earlier. 
+7. Press Enter to begin the clone process. 
 
-Happy coding!
+## Credits
+
+### Photos
+
+1.  
+
+### Code
+
+1. 
+2. [TabletoMarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) was used to convert my additional manual testing table from an excel spreadsheet to markdown. 
+
+
+### Acknowledgments
+
+1. My mentor Dick Vlaanderen for all his helpful advice, guidance, and support.
