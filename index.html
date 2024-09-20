@@ -46,11 +46,15 @@
             <div id="game-rules">
                 <h2>How to Play</h2>
                 <br>
-                <p><i class="fa-solid fa-clover"></i> You will need to figure out where Liam is heading by listening to clues from witnesses.</p>
-                <p><i class="fa-solid fa-clover"></i> In each county, three witnesses have seen (or know someone who has seen) Liam. Click on the Witness to hear and read the hint.</p>
+                <p><i class="fa-solid fa-clover"></i> You will need to figure out where Liam is heading by listening to
+                    clues from witnesses.</p>
+                <p><i class="fa-solid fa-clover"></i> In each county, three witnesses have seen (or know someone who has
+                    seen) Liam. Click on the Witness to hear and read the hint.</p>
                 <p><i class="fa-solid fa-clover"></i> You will start your journey with 2 units of diesel.</p>
-                <p><i class="fa-solid fa-clover"></i> If you select the correct county you will receive an additional unit of diesel.</p>
-                <p><i class="fa-solid fa-clover"></i> If you answer the question incorrectly you will lose a unit of diesel!</p>
+                <p><i class="fa-solid fa-clover"></i> If you select the correct county you will receive an additional
+                    unit of diesel.</p>
+                <p><i class="fa-solid fa-clover"></i> If you answer the question incorrectly you will lose a unit of
+                    diesel!</p>
                 <p><i class="fa-solid fa-clover"></i> If you run out of fuel before reaching Liam the game is over
                     and Ireland is doomed!</p>
                 <br>
@@ -110,6 +114,27 @@
                     <div id="question">
                         <h2 id="hint-text"></h2>
                     </div>
+
+                    <!-- Correct Answer Conatiner Code -->
+                    <div id="correct-answer-container" class="hide">
+                        <div id="correct-answer">
+                            <h2>Correct!</h2>
+                            <br>
+                            <p> Congratulations let's follow Liam </p>
+                            <button id="nextCounty-button">Proceed to Next County</button>
+                        </div>
+                    </div>
+
+                    <!-- Incorrect Answer Conatiner Code -->
+                    <div id="incorrect-answer-container" class="hide">
+                        <div id="incorrect-answer">
+                            <h2>Wrong Way!</h2>
+                            <br>
+                            <p> Oh no this isn't where Liam went! We're losing fuel!! </p>
+                            <button id="tryAgain-button">Try Again</button>
+                        </div>
+                    </div>
+
                     <div id="answers-container">
                         <button class="answer" id="A">Answer A</button>
                         <button class="answer" id="B">Anwser B</button>
@@ -134,25 +159,7 @@
 
         </div>
 
-        <!-- Correct Answer Conatiner Code -->
-        <div id="correct-answer-container" class="hide">
-            <div id="correct-answer">
-                <h2>Correct!</h2>
-                <p> Congratulations let's follow Liam </p>
-                <button id="nextCounty-button">Proceed to Next County</button>
-            </div>
-        </div>
-
-        <!-- Incorrect Answer Conatiner Code -->
-        <div id="incorrect-answer-container" class="hide">
-            <div id="incorrect-answer">
-                <h2>Wrong Way!</h2>
-                <p> Oh no this isn't where Liam went! We're losing fuel!! </p>
-                <button id="tryAgain-button">Try Again</button>
-            </div>
-        </div>
-
-         <!-- Game Win Container Code -->
+        <!-- Game Win Container Code -->
         <div id="win-container" class="hide">
             <div id="game-win">
                 <div id="win-image-container">

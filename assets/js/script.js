@@ -31,6 +31,8 @@ let image4 = document.getElementById('stop4-image');
 let image5 = document.getElementById('stop5-image');
 
 let questionsContainer = document.getElementById('questions-section');
+let questionContainer = document.getElementById('question');
+let hintContainer = document.getElementById('hints');
 let mainScreenContainer = document.getElementById('main-screen');
 let correctAnswerContainer = document.getElementById('correct-answer-container');
 let incorrectAnswerContainer = document.getElementById('incorrect-answer-container');
@@ -121,6 +123,8 @@ function playGame() {
 
 function setRouteQuestion() {
     mainScreenContainer.classList.remove('hide');
+    question.classList.remove('hide');
+    hintContainer.classList.remove('hide');
     correctAnswerContainer.classList.add('hide');
     incorrectAnswerContainer.classList.add('hide');
     if(currentEnergy <1){
@@ -187,7 +191,8 @@ function checkAnswer(event) {
         updateStats();
         if (currentLocation<5){
             correctAnswerContainer.classList.remove('hide');
-            mainScreenContainer.classList.add('hide');
+            question.classList.add('hide');
+            hintContainer.classList.add('hide');
         } else {
             winContainer.classList.remove('hide');
             mainScreenContainer.classList.add('hide');
@@ -195,7 +200,8 @@ function checkAnswer(event) {
 
     } else {
         incorrectAnswerContainer.classList.remove('hide');
-        mainScreenContainer.classList.add('hide');
+        question.classList.add('hide');
+        hintContainer.classList.add('hide');
         --currentEnergy;
         ++incorrectAnswers;
         updateEnergy();
