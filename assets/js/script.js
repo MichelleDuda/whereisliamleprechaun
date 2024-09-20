@@ -166,6 +166,7 @@ function setRouteQuestion() {
     mainScreenContainer.classList.remove('hide');
     question.classList.remove('hide');
     hintContainer.classList.remove('hide');
+    questionNumber.classList.remove('hide');
     correctAnswerContainer.classList.add('hide');
     incorrectAnswerContainer.classList.add('hide');
     if (currentEnergy < 1) {
@@ -259,6 +260,7 @@ function checkAnswer(event) {
         updateStats();
         if (currentLocation < 5) {
             correctAnswerContainer.classList.remove('hide');
+            questionNumber.classList.add('hide');
             question.classList.add('hide');
             hintContainer.classList.add('hide');
         } else {
@@ -267,6 +269,7 @@ function checkAnswer(event) {
         }
 
     } else {
+        questionNumber.classList.add('hide');
         question.classList.add('hide');
         hintContainer.classList.add('hide');
         --currentEnergy;
