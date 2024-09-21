@@ -217,11 +217,16 @@ To Clone this repository:
 5.  [fuelempty.jpg](https://pixabay.com/photos/fuel-petrol-gas-gauge-empty-full-2741/) by PublicDomainPictures from Pixabay.
 6.  [leprechaun.png](https://pixabay.com/illustrations/leprechaun-irish-green-lucky-8616702/) by Gooseflats from Pixabay.
 7.  [smallleprechaun.png](https://pixabay.com/illustrations/leprechaun-irish-green-lucky-8616702/) by Gooseflats from Pixabay.
+8.  [woman.png]() 
+9.  potofgold.webp created using OpenAI's DALL·E, created with assistance from ChatGPT.
+10. cork.jpg, donegal,jpg, kerry.jpg, meath.jpg, waterford.jpg were all created by Michelle Kelly using Microsoft Paint. 
 
 ### Code
 
-1. 
-2. [TabletoMarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) was used to convert my additional manual testing table from an excel spreadsheet to markdown. 
+1. Code for using an event listener on a class is adapted from [Stackoverflow.com](https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class).
+2. Use of event.target.id is adapted from [Coreui.io](https://coreui.io/blog/how-to-get-element-id-in-javascript/). 
+3. Code for dymanically updated audio source based on which witness image the user selects is adapted from [Stackoverflow.com](https://stackoverflow.com/questions/10792163/change-audio-src-with-javascript).
+4. [TabletoMarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) was used to convert my additional manual testing table from an excel spreadsheet to markdown. 
 
 
 ### Acknowledgments
