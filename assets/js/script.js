@@ -212,7 +212,7 @@ function playHint(event) {
         console.log(audio3.src);
         audio3.play();
     } else {
-        alert("No Hint");
+       console.log('error playing hint');
     }
 }
 

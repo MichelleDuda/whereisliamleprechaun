@@ -35,7 +35,7 @@ Where in Ireland is Liam the Leprechaun is an educational game aimed at teaching
 
 The overall goal of this game is help find Liam the Leprechaun who has absconded from Dublin with the legendary pot of gold from beneath the magical rainbow. The user will start their journey in Dublin where they will encounter witnesses bearing clues as to which county Liam traveled to next. With each correct response the user moves a step closer to Liam and recovering the pot of gold. 
 
-The game targets primary school children who are looking to learn and test thier knowledge of Ireland. However, older children and adults could also play!   
+The game targets primary school children (ages 8-12) who are looking to learn about and test thier knowledge of Ireland. However, older children and adults could also benefit from playing!   
 
 ## User Experience (UX)
 
@@ -210,7 +210,13 @@ To Clone this repository:
 
 ### Photos
 
-1.  
+1.  [background.webp](https://pixabay.com/illustrations/clover-leaf-pattern-repetition-8108105/) by Martin Hetto from Pixabay.
+2.  [energy.jpg](https://www.pexels.com/photo/top-view-photo-of-clover-leaves-158780/) from Pixabay.
+3.  [farmer.jpg](https://pixabay.com/vectors/farmer-rural-worker-agriculture-148325/) by OpenClipart-Vectors from Pixabay.
+4.  [footballer.jpg](https://pixabay.com/vectors/footballer-football-sport-game-boy-1204089/) by grafikacesky from Pixabay.
+5.  [fuelempty.jpg](https://pixabay.com/photos/fuel-petrol-gas-gauge-empty-full-2741/) by PublicDomainPictures from Pixabay.
+6.  [leprechaun.png](https://pixabay.com/illustrations/leprechaun-irish-green-lucky-8616702/) by Gooseflats from Pixabay.
+7.  [smallleprechaun.png](https://pixabay.com/illustrations/leprechaun-irish-green-lucky-8616702/) by Gooseflats from Pixabay.
 
 ### Code
 

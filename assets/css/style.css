@@ -10,7 +10,7 @@
 
 /* General Styles */
 body {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.webp");
     background-size: cover;
     font-family: 'Raleway', sans-serif;
 }
@@ -92,6 +92,8 @@ header {
 
 #intro-image {
     border-radius: 40px;
+    max-width: 400px;
+    height: auto;
 }
 
 #play-button, .play-again-button,
