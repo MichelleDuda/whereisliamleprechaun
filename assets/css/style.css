@@ -106,6 +106,7 @@ header {
     border: black 2px solid;
     border-radius: 20px;
     padding: 7px;
+    font-size: 125%;
 }
 
 /* Main Screen Sub-Container Styling */
