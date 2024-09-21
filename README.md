@@ -39,15 +39,14 @@ The game targets primary school children (ages 8-12) who are looking to learn ab
 
 ## User Experience (UX)
 
-### Site Goals
-
-  #### Site Owner Goals
-  As the site owner, I want to:
-  - 
-
-  #### User Goals
+### User Goals
   As a User, I want to:
-  - 
+  - easily understand the purpose of the site.
+  - easily view instructions on how to play the game.
+  - easily and intuitivly interact with the game.
+  - be able to see how many questions I have remaining.
+  - be able to see how many attempts I have left. 
+  - be able to easily see the result of the game and be able to play again.
 
 
 ## Design
@@ -86,9 +85,15 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 
 ## Features
 
-### Introdcution
-- 
-<img src="documentation/navigationbar-small.jpg">
+### Title
+- The title contains white font on a green background to keep with the Irish theme and provide good contrast.
+- The text is capitalized and a black shadow was utilized to make it further stand out against the background.
+- A small image of a leprechaun was added to add emphasis to the title and theme. 
+<img src="documentation/features/title.jpg">
+
+### Introduction - Home Screen
+- The homescreen contains the title of the game as well as a small introduction to what the game is about. The design is simple with a background containing green clovers, in keeping with the overall theme. The introduction screen contains an image of a pot of gold under a rainbow to symbolize the pot of gold stolen by Liam the Leprechaun. There is a single button on this page that will lead the user to the game rules.  
+<img src="documentation/features/homepage.jpg">
 
 ### How to Play Section
 - 
@@ -175,7 +180,8 @@ This website was tested on the following browsers:
 - Mozilla Firefox Version 128.0.3 (64-bit)
 
 ### Bugs
-1. 
+1. The game-over-container was remaining on the screen after selected to play again. Fixed by adding gameOverContainer.classList.add('hide') to the resetGame function. 
+2. Flags in route-container were not defaulting back to the mystery flags when a user selected to play again after completeing the game. Fixed by adding code to reset all of route-container image sources to mysteryflag.jpg if currentLocation is equal to 0. 
 
 ### Known Bugs
 There are no unaddressed known bugs at this time. 

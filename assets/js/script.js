@@ -194,6 +194,7 @@ function setRouteQuestion() {
  * This function determines if the event.target.id is hint1-image, hint2-image, or hint3-image and retrieves the corresponding hint data. 
  */
 // Code to get event target ID adapted from https://coreui.io/blog/how-to-get-element-id-in-javascript/
+// Code to update audio source was adapted from https://stackoverflow.com/questions/10792163/change-audio-src-with-javascript
 function playHint(event) {
     console.log(event.target.id);
     if (event.target.id === 'hint1-image') {

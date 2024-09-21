@@ -29,6 +29,8 @@ main {
 header {
     color: whitesmoke;
     font-family: 'Nerko One', sans-serif;
+    text-transform: uppercase;
+    text-shadow: black 5px 5px 2px;
     background-color: #005a00d3;
     letter-spacing: 2px;
     text-align: center;
