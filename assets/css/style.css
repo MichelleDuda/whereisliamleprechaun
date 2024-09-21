@@ -48,7 +48,7 @@ header {
 /* Introdution & Game Rules Box Styles */
 #intro-container,
 #game-rules-container,
-#destination-section, #correct-answer-container, #incorrect-answer-container, #win-container {
+#destination-section, #correct-answer-container, #incorrect-answer-container, #win-container, #game-over-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +56,7 @@ header {
 
 #game-intro,
 #game-rules,
-#destination-container, #stats-container, #correct-answer, #incorrect-answer, #game-win {
+#destination-container, #stats-container, #correct-answer, #incorrect-answer, #game-win, #game-over {
     background-color: whitesmoke;
     width: 80vw;
     max-width: 800px;
@@ -71,7 +71,7 @@ header {
     text-align: center;
 }
 
-#game-win-image {
+#game-win-image, #game-over-image {
     height: auto;
     max-width: 200px;
 }
@@ -94,7 +94,7 @@ header {
     border-radius: 40px;
 }
 
-#play-button, #play-again-button,
+#play-button, .play-again-button,
 #rules-button, #nextCounty-button, #tryAgain-button {
     text-align: center;
     background-color: darkgreen;

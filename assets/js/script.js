@@ -12,7 +12,7 @@ let mainScreenContainer = document.getElementById('main-screen');
 // DOM Element References for General Buttons
 let rulesButton = document.getElementById('rules-button');
 let playButton = document.getElementById('play-button');
-let playAgainButton = document.getElementById('play-again-button');
+let playAgainButton = document.getElementsByClassName('play-again-button');
 let nextCountyButton = document.getElementById('nextCounty-button');
 let tryAgainButton = document.getElementById('tryAgain-button');
 
@@ -23,6 +23,7 @@ let hintContainer = document.getElementById('hints');
 let correctAnswerContainer = document.getElementById('correct-answer-container');
 let incorrectAnswerContainer = document.getElementById('incorrect-answer-container');
 let winContainer = document.getElementById('win-container');
+let gameOverContainer = document.getElementById('game-over-container');
 
 // DOM Element References for Question & Hint Display
 let questionNumber = document.getElementById('question-number');
@@ -170,7 +171,7 @@ function setRouteQuestion() {
     correctAnswerContainer.classList.add('hide');
     incorrectAnswerContainer.classList.add('hide');
     if (currentEnergy < 1) {
-        alert("Game Over!");
+        gameOverContainer.classList.remove('hide');
     } else if (currentLocation < 5) {
         document.getElementById('question-number').innerText = `Question ${currentLocation + 1}`;
         document.getElementById('hint-text').textContent = "";
@@ -279,7 +280,8 @@ function checkAnswer(event) {
         if (currentEnergy > 0) {
             incorrectAnswerContainer.classList.remove('hide');
         } else {
-            alert("Game Over!");
+            gameOverContainer.classList.remove('hide');
+            mainScreenContainer.classList.add('hide');
         }
     }
 
@@ -342,7 +344,12 @@ rulesButton.addEventListener('click', showRules);
 playButton.addEventListener('click', playGame);
 nextCountyButton.addEventListener('click', setRouteQuestion);
 tryAgainButton.addEventListener('click', setRouteQuestion);
-playAgainButton.addEventListener('click', resetGame);
+
+//Code for Class Name Event listener adapted from: https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
+for (let i = 0; i < playAgainButton.length; i++) {
+    playAgainButton[i].addEventListener('click', resetGame, false);
+}
+
 
 //Event Listeners for Answer Buttons
 AnswerA.addEventListener('click', checkAnswer);

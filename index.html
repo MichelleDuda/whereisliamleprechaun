@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- Meta tags for search engines -->
-     <meta name="description" content="Trivia Game, Where in Ireland is Liam the Leprechaun, Questions about Ireland's Counties">
-     <meta name="keywords"
-         content="trivia, game, liam the leprechaun, counties, Ireland, kids, fun">
+    <!-- Meta tags for search engines -->
+    <meta name="description"
+        content="Trivia Game, Where in Ireland is Liam the Leprechaun, Questions about Ireland's Counties">
+    <meta name="keywords" content="trivia, game, liam the leprechaun, counties, Ireland, kids, fun">
     <title>Where in Ireland is Liam the Leprechaun</title>
 
     <!-- Favicon -->
@@ -23,7 +23,8 @@
 <body>
     <header>
         <br>
-        <h1>Where in Ireland is Liam the Leprechaun <img src="assets/images/smallleprechaun.png" alt="small leprechaun"></h1>
+        <h1>Where in Ireland is Liam the Leprechaun <img src="assets/images/smallleprechaun.png" alt="small leprechaun">
+        </h1>
         <br>
     </header>
 
@@ -180,7 +181,7 @@
                 <p>You're impressive knowledge of Ireland has helped us to capture Liam and return the pot of gold to
                     the rainbow! </p>
                 <br>
-                <button id="play-again-button">Play Again!</button>
+                <button class="play-again-button">Play Again!</button>
             </div>
         </div>
 
@@ -188,8 +189,14 @@
         <div id="game-over-container" class="hide">
             <div id="game-over">
                 <h2>Game Over!!</h2>
+                <br>
+                <div id="game-over-image-container">
+                    <img id="game-over-image" src="assets/images/fuelempty.jpg" alt="empty fuel gauge">
+                </div>
+                <br>
                 <p> You ran out of fuel! Liam has escaped with the Pot of Gold! </p>
-                <button id="tryAgain-button">Try Again</button>
+                <br>
+                <button class="play-again-button">Try Again</button>
             </div>
         </div>
 
