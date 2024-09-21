@@ -134,6 +134,7 @@ function resetGame() {
     updateStats();
     updateRoute();
     winContainer.classList.add('hide');
+    gameOverContainer.classList.add('hide');
     playGame();
 }
 
@@ -317,23 +318,29 @@ function updateEnergy() {
  */
 function updateRoute() {
     console.log(currentLocation);
-    if (currentLocation === 1) {
+     if (currentLocation === 0){
+        image1.src = `assets/images/mysteryflag.jpg`;
+        image2.src = `assets/images/mysteryflag.jpg`;
+        image3.src = `assets/images/mysteryflag.jpg`;
+        image4.src = `assets/images/mysteryflag.jpg`;
+        image5.src = `assets/images/mysteryflag.jpg`;
+     }else if (currentLocation === 1) {
         image1.src = `assets/images/${route[currentLocation-1]}.jpg`;
-        console.log(image1.src);
+        
     } else if (currentLocation === 2) {
         image2.src = `assets/images/${route[currentLocation-1]}.jpg`;
-        console.log(image2.src);
+        
     } else if (currentLocation === 3) {
         image3.src = `assets/images/${route[currentLocation-1]}.jpg`;
-        console.log(image3.src);
+       
     } else if (currentLocation === 4) {
         image4.src = `assets/images/${route[currentLocation-1]}.jpg`;
-        console.log(image4.src);
+       
     } else if (currentLocation === 5) {
         image5.src = `assets/images/${route[currentLocation-1]}.jpg`;
-        console.log(image5.src);
+       
     } else {
-        console.log('error');
+        console.log('error updating route flags');
     }
 }
 
