@@ -135,8 +135,8 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 
 ### Future Features
 In the future, this game could be further developed to include the following:
-    - A randomizer that creates new routes each time the game is played.
-    - A timer feature that allows Liam to get further away depending on how long the player takes to traverse the counties. 
+   - A randomizer that creates new routes each time the game is played.
+   - A timer feature that allows Liam to get further away depending on how long the player takes to traverse the counties. 
 
 
 ## Technologies Used
@@ -150,6 +150,7 @@ In the future, this game could be further developed to include the following:
 - [Google Fonts](https://fonts.google.com) was used for the fonts: Oswald and Lato.
 - [Font Awesome](https://fontawesome.com/) was used for various icons in the footer and headings of the pages. 
 - [Balsamiq](https://balsamiq.com/) was used to create the wireframes.
+- [TTSMaker](https://ttsmaker.com/) was used to create the audio files for the hints. 
 
 
 ## Testing

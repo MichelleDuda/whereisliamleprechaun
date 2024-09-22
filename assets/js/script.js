@@ -19,7 +19,6 @@ let tryAgainButton = document.getElementById('tryAgain-button');
 
 // DOM Element References for Question & Hints Section Containers
 let questionsContainer = document.getElementById('questions-section');
-let questionContainer = document.getElementById('question');
 let hintContainer = document.getElementById('hints');
 let correctAnswerContainer = document.getElementById('correct-answer-container');
 let incorrectAnswerContainer = document.getElementById('incorrect-answer-container');
@@ -56,7 +55,7 @@ let energyRemaining = document.getElementById('energy-remaining');
 
 
 //Array to determine Route
-const route = ['meath', 'waterford', 'cork', 'kerry', 'donegal']
+const route = ['meath', 'waterford', 'cork', 'kerry', 'donegal'];
 
 //Array to hold Questions
 const Questions = [{
@@ -103,7 +102,7 @@ const Questions = [{
         choices: ["Sligo", "Donegal", "Mayo", "Leitrim"],
         answer: 2
     },
-]
+];
 
 /**
  * Displays game rules by hiding introduction container and displaying game rules container
@@ -170,7 +169,6 @@ function setRouteQuestion() {
     questionsContainer.classList.remove('hide');
     energyContainer.classList.remove('hide');
     statsContainer.classList.remove('hide');
-    question.classList.remove('hide');
     hintContainer.classList.remove('hide');
     questionNumber.classList.remove('hide');
     correctAnswerContainer.classList.add('hide');
