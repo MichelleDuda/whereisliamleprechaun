@@ -158,18 +158,18 @@ In the future, this game could be further developed to include the following:
 - [HTML Validator](https://validator.w3.org/)
 
   - Result for index.html
-      ![HTML results index](documentation/validation-results/validation-no-error.jpg)
+      ![HTML results index](documentation/validation-results/htmlvalidator.jpg)
 
 
   - Full Validation Results available:
-    - <a href="https://github.com/michelleduda/scoops-ice-cream/blob/main/documentation/validation-results/html-validation-index.pdf" target="_blank">HTML Results - Home Page</a>
+    - <a href="https://github.com/michelleduda/whereisliamleprechaun/blob/main/documentation/validation-results/html-validation-index.pdf" target="_blank">HTML Results - Home Page</a>
  
 - [CSS Validator](https://jigsaw.w3.org/css-validator)
   - Result for style.css
-      ![CSS results](documentation/validation-results/css-no-errors.jpg)
+      ![CSS results](documentation/validation-results/cssvalidation.jpg)
 
   - Full Validation Results available:
-    - <a href="https://github.com/michelleduda/scoops-ice-cream/blob/main/documentation/validation-results/css-validation-results.pdf" target="_blank">CSS Results</a>
+    - <a href="https://github.com/michelleduda/whereisliamleprechaun/blob/main/documentation/validation-results/css-validation-results.pdf" target="_blank">CSS Results</a>
 
 - [Javascript Validator](https://jigsaw.w3.org/css-validator)
   - Result for script.js
@@ -182,7 +182,6 @@ In the future, this game could be further developed to include the following:
 - Lighthouse result for index.html
 
     ![Lighthouse results index](documentation/lighthouse/lighthouse_index.jpg)
-- Lighthouse result for menu.html
 
 
 ### Additional Manual Testing
@@ -197,6 +196,7 @@ This website was tested on the following browsers:
 ### Bugs
 1. The game-over-container was remaining on the screen after selected to play again. Fixed by adding gameOverContainer.classList.add('hide') to the resetGame function. 
 2. Flags in route-container were not defaulting back to the mystery flags when a user selected to play again after completeing the game. Fixed by adding code to reset all of route-container image sources to mysteryflag.jpg if currentLocation is equal to 0. 
+3. HTML validator returned error: Bad value for attribute src on element audio. Must be non-empty. Fixed by creating a default audio file and applying to audio element on index.html.
 
 ### Known Bugs
 There are no unaddressed known bugs at this time. 
