@@ -62,24 +62,29 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 ### Wireframes
 
 <details><summary>Introduction Screen</summary>
-<img src="documentation/wireframes/mobile-phone-home.png">
-<img src="documentation/wireframes/tablet-home.png">
-<img src="documentation/wireframes/laptop-home.png">
+<img src="documentation/wireframes/introduction-desktop.png">
+<img src="documentation/wireframes/introduction-tablet.png">
+<img src="documentation/wireframes/introduction-mobile.png">
 </details>
-<details><summary>Main Play Screen</summary>
-<img src="documentation/wireframes/mobile-phone-menu.png">
-<img src="documentation/wireframes/tablet-menu.png">
-<img src="documentation/wireframes/laptop-menu.png">
+<details><summary>How to Play Screen</summary>
+<img src="documentation/wireframes/howtoplay-desktop.png">
+<img src="documentation/wireframes/howtoplay-tablet.png">
+<img src="documentation/wireframes/howtoplay-mobile.png">
 </details>
-<details><summary>Correct/Incorrect Answer Screen</summary>
-<img src="documentation/wireframes/mobile-phone-contact.png">
-<img src="documentation/wireframes/tablet-contact.png">
-<img src="documentation/wireframes/laptop-contact.png">
+<details><summary>Main Quiz Screen</summary>
+<img src="documentation/wireframes/mainquiz-desktop.png">
+<img src="documentation/wireframes/mainquiz-tablet.png">
+<img src="documentation/wireframes/mainquiz-mobile.png">
 </details>
 <details><summary>Game Win Screen</summary>
-<img src="documentation/wireframes/mobile-phone-confirmation.png">
-<img src="documentation/wireframes/tablet-confirmation.png">
-<img src="documentation/wireframes/laptop-confirmation.png">
+<img src="documentation/wireframes/gamewin-desktop.png">
+<img src="documentation/wireframes/gamewin-tablet.png">
+<img src="documentation/wireframes/gamewin-mobile.png">
+</details>
+<details><summary>Game Over Screen</summary>
+<img src="documentation/wireframes/gameover-desktop.png">
+<img src="documentation/wireframes/gameover-tablet.png">
+<img src="documentation/wireframes/gameover-mobile.png">
 </details>
 
 
