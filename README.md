@@ -123,16 +123,22 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 - The game contains several other display containers that give the user feedback on their progress:
 
 ##### Correct Answer/Incorrect Answer
+- After a user selects an answer, either the correct or incorrect answer container appears. These containers are styled with a bright green (correct) or bright red (incorrect) border to add to the visual effect. Each container is also equipped with a button to either return the user to the question to try again or proceed onto the next county accordingly. 
 
-<img src="documentation/menupage.jpg">
+<img src="documentation/features/correct.jpg">
+<img src="documentation/features/incorrect.jpg">
 
 #### Current Statistics
-- 
+- The current statistics section gives the user a snapshot of how many times they've guess correctly vs incorrectly throughout the game. 
 
-<img src="documentation/contactus.jpg">
+<img src="documentation/features/stats.jpg">
 
 ### Future Features
-- 
+In the future, this game could be further developed to include the following:
+    - A randomizer that creates new routes each time the game is played.
+    - A timer feature that allows Liam to get further away depending on how long the player takes to traverse the counties. 
+
+
 ## Technologies Used
 
 ### Languages
