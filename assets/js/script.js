@@ -327,21 +327,26 @@ function updateRoute() {
         image3.src = `assets/images/mysteryflag.jpg`;
         image4.src = `assets/images/mysteryflag.jpg`;
         image5.src = `assets/images/mysteryflag.jpg`;
+        image1.alt = `mystery flag`;
+        image2.alt = `mystery flag`;
+        image3.alt = `mystery flag`;
+        image4.alt = `mystery flag`;
+        image5.alt = `mystery flag`;
      }else if (currentLocation === 1) {
         image1.src = `assets/images/${route[currentLocation-1]}.jpg`;
-        
+        image1.alt=`${route[currentLocation-1]} flag`;        
     } else if (currentLocation === 2) {
         image2.src = `assets/images/${route[currentLocation-1]}.jpg`;
-        
+        image2.alt=`${route[currentLocation-1]} flag`;       
     } else if (currentLocation === 3) {
         image3.src = `assets/images/${route[currentLocation-1]}.jpg`;
-       
+        image3.alt=`${route[currentLocation-1]} flag`; 
     } else if (currentLocation === 4) {
         image4.src = `assets/images/${route[currentLocation-1]}.jpg`;
-       
+        image4.alt=`${route[currentLocation-1]} flag`; 
     } else if (currentLocation === 5) {
         image5.src = `assets/images/${route[currentLocation-1]}.jpg`;
-       
+        image5.alt=`${route[currentLocation-1]} flag`; 
     } else {
         console.log('error updating route flags');
     }
