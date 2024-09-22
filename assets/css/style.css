@@ -21,6 +21,10 @@ main {
     margin-top: 50px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 /* Style to hide divs */
 .hide {
     display: none !important;
@@ -189,6 +193,10 @@ header img {
 
 #hints div {
     margin: 0 10px;
+}
+
+#hints img:hover {
+    cursor: pointer;
 }
 
 /* Route & Energy Styling */
