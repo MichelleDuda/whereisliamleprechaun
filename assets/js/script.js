@@ -95,7 +95,7 @@ const Questions = [{
     },
 
     {
-        hints: ["I saw him at the pub last night. He asked if I had ever surfed in Bundoran. I told him I can barely balance standing up, nevermind on a surf board.",
+        hints: ["I saw him at the pub last night. He asked if I had ever surfed in Bundoran. I told him I can barely balance standing up, nevermind on a surfboard.",
             "We were having a chat about how much we loved hiking. He mentioned heading to Glenveagh National Park and asked if I knew of any good trails there.",
             "He seems to be an adventurous little guy. Told me he was headed to climb to the top of the highest sea cliffs in Ireland.",
         ],
