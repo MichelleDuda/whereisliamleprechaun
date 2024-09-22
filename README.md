@@ -5,29 +5,40 @@
 ## Index - Table of Contents
 * [Introduction](#introduction)
 * [User Experience (UX)](#user-experience-ux) 
-    * [Site Goals](#site-goals) 
+    * [User Goals](#user-goals) 
 * [Design](#design)
-    * [Colour](#colour)
-    * [Fonts](#fonts)
-    * [Wireframes](#wireframes)
+    * [Colour](#colour)
+    * [Fonts](#fonts)
+    * [Wireframes](#wireframes)
 * [Features](#features)
-    * [Introduction](#Introdcution)
+    * [Title](#title)
+    * [Introduction](#introduction---home-screen)
+    * [How To Play Section](#how-to-play-section)
+    * [Main Question Display](#main-question-display)
+        * [Hint and Answer Section](#hint-and-answer-section)
+        * [Fuel Gauge](#fuel-gauge)
+        * [Route](#route)
+        * [Feedback Displays](#feedback-displays)
+            * [Correct/Incorrect Answers](#correct-answerincorrect-answer)
+        * [Current Statistics](#current-statistics)
+    * [Future Features](#future-features)
 * [Technologies Used](#technologies-used)
-    * [Languages](#languages)
-    * [Frameworks, Libraries and Programs Used](#frameworks-libraries--programs-used)
+    * [Languages](#languages)
+    * [Frameworks, Libraries and Programs Used](#frameworks-libraries--programs-used)
 * [Testing](#testing)
-    * [Validator Testing](#validator-testing)
-    * [Lighthouse Testing](#lighthouse-testing)
-    * [Additional Manual Testing](#additional-manual-testing)
-    * [Browser Compatibility](#browser-compatibility)
-    * [Bugs](#bugs)
-    * [Known Bugs](#known-bugs)
+    * [Validator Testing](#validator-testing)
+    * [Lighthouse Testing](#lighthouse-testing)
+    * [Additional Manual Testing](#additional-manual-testing)
+    * [Browser Compatibility](#browser-compatibility)
+    * [Bugs](#bugs)
+    * [Known Bugs](#known-bugs)
 * [Deployment](#deployment)
-    * [How This Site Was Deployed](#how-this-site-was-deployed)
+    * [How This Site Was Deployed](#how-this-site-was-deployed)
+    * [How to Clone The Repository](#how-to-clone-the-repository)
 * [Credits](#credits)
-    * [Photos](#photos)
-    * [Code](#code)
-    * [Acknowledgments](#acknowledgments)
+    * [Photos](#photos)
+    * [Code](#code)
+    * [Acknowledgments](#acknowledgments)
 
 
 ## Introduction
@@ -109,6 +120,11 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 - The main display contains several sections that are hidden and revealed throughout the game using a CSS 'hide' class that is removed and added via javascript functions that are linked with event listeners. The overall theme of this section is consistent with the rest of the game, with the same background and title visible to the player. 
 <img src="documentation/features/main.jpg">
 
+### Hint and Answer Section
+- The hint section contains three images that are labeled as Witness 1, Witness 2, and Witness 3. Rather than just having clues or questions written on the screen, I felt it engaged the user more to have to "interact" with these witnesses to get the hints needed to solve where Liam went. 
+- When you click on a witness a Javascript function to play the appropriate audio file is triggered via an event listener. The hint is then displayed in text and played via an audio file. 
+<img src="documentation/features/hint.jpg">
+
 #### Fuel Gauge
 - The fuel gauge is used to keep the user's score. It increases each time a question is answered correctly and decreases each time the question is answered incorrectly. 
 - If the fuel gauge reaches 0 the game is over.
@@ -177,12 +193,10 @@ In the future, this game could be further developed to include the following:
   - Full Validation Results available:
     - <a href="https://github.com/michelleduda/whereisliamleprechaun/blob/main/documentation/validation-results/css-validation-results.pdf" target="_blank">CSS Results</a>
 
-- [Javascript Validator](https://jigsaw.w3.org/css-validator)
-  - Result for script.js
- ![Javascript results](documentation/validation-results/css-no-errors.jpg)
+- [Javascript Validator](https://jshint.com)
+  - Code from script.js passed through JSHint site with no errors. The following Metrics were logged: There are 9 functions in this file. Function with the largest signature take 1 arguments, while the median is 0. Largest function has 33 statements in it, while the median is 10. The most complex function has a cyclomatic complexity value of 8 while the median is 1.
 
-  - Full Validation Results available:
-    - <a href="https://github.com/michelleduda/scoops-ice-cream/blob/main/documentation/validation-results/css-validation-results.pdf" target="_blank">CSS Results</a>    
+
 
 ### Lighthouse Testing
 - Lighthouse results for index.html
