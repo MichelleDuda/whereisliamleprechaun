@@ -307,7 +307,7 @@ function updateStats() {
  * It also updates the energy-count number displayed below the gauge. 
  */
 function updateEnergy() {
-    let energyHeight = 180 - (currentEnergy * 20);
+    let energyHeight = 210 - (currentEnergy * 30);
     energyRemaining.style.height = `${energyHeight}px`;
     document.getElementById('energy-count').innerText=currentEnergy;
 }
