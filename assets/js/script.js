@@ -3,6 +3,7 @@ let currentLocation = 0;
 let currentEnergy = 2;
 let correctAnswers = 0;
 let incorrectAnswers = 0;
+let allAudios = document.querySelectorAll('audio'); //taken from https://stackoverflow.com/questions/43430897/javascript-to-stop-playing-sound-when-another-starts for stopAllAudio function
 
 // DOM Element References for Main Containers
 let introContainer = document.getElementById('intro-container');
@@ -199,6 +200,7 @@ function setRouteQuestion() {
 // Code to update audio source was adapted from https://stackoverflow.com/questions/10792163/change-audio-src-with-javascript
 function playHint(event) {
     console.log(event.target.id);
+    stopAllAudio();
     if (event.target.id === 'hint1-image') {
         document.getElementById('hint-text').textContent = Questions[currentLocation].hints[0];
         audio1.src = `assets/audio/${route[currentLocation]}-hint1.mp3`;
@@ -219,6 +221,16 @@ function playHint(event) {
     }
 }
 
+/**
+ * Stops all audio that is currently playing.
+ * 
+ * Code taken from https://stackoverflow.com/questions/43430897/javascript-to-stop-playing-sound-when-another-starts
+ */
+function stopAllAudio(){
+	allAudios.forEach(function(audio){
+		audio.pause();
+	});
+}
 /**
  * 
  * Checks the players answer selection against the correct answer for the current question and updates game accordingly. 
@@ -242,6 +254,7 @@ function playHint(event) {
  * 
  */
 function checkAnswer(event) {
+    stopAllAudio();
     let a = Questions[currentLocation].answer;
     let b;
     if (event.target.id === "A") {
