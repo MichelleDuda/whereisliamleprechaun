@@ -105,24 +105,30 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 - The title contains white font on a green background to keep with the Irish theme and provide good contrast.
 - The text is capitalized and a black shadow was utilized to make it further stand out against the background.
 - A small image of a leprechaun was added to emphasize the title and theme. 
+
 <img src="documentation/features/title.jpg">
 
 ### Introduction - Home Screen
-- The home screen contains the title of the game as well as a small introduction to what the game is about. The design is simple with a background containing green clovers, in keeping with the overall theme. The background and styling are simple to not distract from the game. The introduction screen contains an image of a pot of gold under a rainbow to symbolize the pot of gold stolen by Liam the Leprechaun. There is a single button on this page that will lead the user to the game rules.  
+- The home screen contains the title of the game as well as a small introduction to what the game is about. The design is simple with a background containing green clovers, in keeping with the overall theme. The background and styling are simple to not distract from the game. The introduction screen contains an image of a pot of gold under a rainbow to symbolize the pot of gold stolen by Liam the Leprechaun. There is a single button on this page that will lead the user to the game rules. 
+ 
 <img src="documentation/features/homepage.jpg">
 
 ### How to Play Section
 - The How to Play Section informs users of the basics of the game and what they need to do in order to find Liam and retrieve the pot of gold. It clearly states what happens if they answer correctly or incorrectly. 
-- This page also contains a start button - labeled as 'Save the Emerald Isle' in keeping with the theme. This button will remove the 'How to Play' section from the screen and display the main game question screen. 
+- This page also contains a start button - labeled as 'Save the Emerald Isle' in keeping with the theme. This button will remove the 'How to Play' section from the screen and display the main game question screen.  
+
 <img src="documentation/features/rules.jpg">
 
 ### Main Question Display
 - The main display contains several sections that are hidden and revealed throughout the game using a CSS 'hide' class that is removed and added via javascript functions that are linked with event listeners. The overall theme of this section is consistent with the rest of the game, with the same background and title visible to the player. 
+ 
+
 <img src="documentation/features/main.jpg">
 
 ### Hint and Answer Section
 - The hint section contains three images that are labeled as Witness 1, Witness 2, and Witness 3. Rather than just having clues or questions written on the screen, I felt it engaged the user more to have to "interact" with these witnesses to get the hints needed to solve where Liam went. 
 - When you click on a witness a Javascript function to play the appropriate audio file is triggered via an event listener. The hint is then displayed in text and played via an audio file. 
+
 <img src="documentation/features/hint.jpg">
 
 #### Fuel Gauge
@@ -136,6 +142,7 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 - The route section contains 5 "mystery flags" when you start the game. 
 - As a player correctly identifies each county along the way, that county's flag will populate along the route. 
 - This serves as a nice visual to show the user's progress and let them know how far they have to go to capture Liam. 
+
 <img src="documentation/features/routestart.jpg">
 <img src="documentation/features/routemiddle.jpg">
 <img src="documentation/features/routeend.jpg">
