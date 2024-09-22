@@ -297,7 +297,8 @@ To Clone this repository:
 1. Code for using an event listener on a class is adapted from [Stackoverflow.com](https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class).
 2. Use of event.target.id is adapted from [Coreui.io](https://coreui.io/blog/how-to-get-element-id-in-javascript/). 
 3. Code for dymanically updated audio source based on which witness image the user selects is adapted from [Stackoverflow.com](https://stackoverflow.com/questions/10792163/change-audio-src-with-javascript).
-4. [TabletoMarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) was used to convert my additional manual testing table from an excel spreadsheet to markdown. 
+4. Code to for stopAllAudio function that pauses audio if another is played or an answer is selected was taken from [Stackoverflow.com](https://stackoverflow.com/questions/43430897/javascript-to-stop-playing-sound-when-another-starts).
+5. [TabletoMarkdown.com](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/) was used to convert my additional manual testing table from an excel spreadsheet to markdown. 
 
 
 ### Acknowledgments
