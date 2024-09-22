@@ -92,32 +92,39 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 <img src="documentation/features/title.jpg">
 
 ### Introduction - Home Screen
-- The homescreen contains the title of the game as well as a small introduction to what the game is about. The design is simple with a background containing green clovers, in keeping with the overall theme. The introduction screen contains an image of a pot of gold under a rainbow to symbolize the pot of gold stolen by Liam the Leprechaun. There is a single button on this page that will lead the user to the game rules.  
+- The homescreen contains the title of the game as well as a small introduction to what the game is about. The design is simple with a background containing green clovers, in keeping with the overall theme. The background and styling is simple to not distract from the game. The introduction screen contains an image of a pot of gold under a rainbow to symbolize the pot of gold stolen by Liam the Leprechaun. There is a single button on this page that will lead the user to the game rules.  
 <img src="documentation/features/homepage.jpg">
 
 ### How to Play Section
-- 
-<img src="documentation/landingimage.jpg">
+- The How to Play Section informs users of the basics of the game and what they need to do in order to find Liam and retreive the pot of gold. It clearly states what happens if they answer correctly or incorrectly. 
+- This page also contains a start button - labeled as 'Save the Emerald Isle' in keeping with the theme. This button will remove the 'How to Play' section from the screen and display the main game question screen. 
+<img src="documentation/features/rules.jpg">
 
 ### Main Question Display
-- 
-<img src="documentation/aboutus.jpg">
+- The main display contains several sections that are hidden and revealed throughout the game using a CSS 'hide' class that is removed and added via javascript functions that are linked with event listeners. The overall theme of this section is consistent with the rest of the game, with the same background and title visible to the player. 
+<img src="documentation/features/main.jpg">
 
-### Fuel Guage
-- 
+#### Fuel Gauge
+- The fuel gauge is used to keep the user's score. It increases each time a question is answered correctly and decreases each time the question is answered incorrectly. 
+- If the fuel gauge reaches 0 the game is over.
+- A picture of a field of clovers was used to fill the fuel gauge to enhance the Irish theme.
 
-<img src="documentation/footer.jpg">
+<img src="documentation/features/fuelstart.jpg"><img src="documentation/features/fuelend.jpg">
 
-### Route 
--  
-<img src="documentation/contactheading.jpg">
+#### Route 
+- The route section contains 5 "mystery flags" when you start the game. 
+- As a player correctly identifies each county along the way, that county's flag will populate along the route. 
+- This serves as a nice visual to show the user's progress and let them know how far they have to go to capture Liam. 
+<img src="documentation/features/routestart.jpg">
+<img src="documentation/features/routemiddle.jpg">
+<img src="documentation/features/routeend.jpg">
 
-### Feedback Dispalys
+#### Feedback Dispalys
 - 
 
 <img src="documentation/menupage.jpg">
 
-### Current Statistics
+#### Current Statistics
 - 
 
 <img src="documentation/contactus.jpg">
