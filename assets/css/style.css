@@ -41,6 +41,10 @@ header {
     padding-bottom: 10px;
 }
 
+header img {
+    max-height: 200px;
+    width: auto;
+}
 
 /* Main Game Screen Styles */
 #main-screen {
