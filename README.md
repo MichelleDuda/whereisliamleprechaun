@@ -206,9 +206,9 @@ In the future, this game could be further developed to include the following:
 
 
 ### Lighthouse Testing
-- Lighthouse results for index.html
+- Lighthouse results:
 
- ![Lighthouse results index](documentation/lighthouse/lighthouse_index.jpg)
+ ![Lighthouse Results](documentation/validation-results/lighthouse.jpg)
 
 
 ### Additional Manual Testing
