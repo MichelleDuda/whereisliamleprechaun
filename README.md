@@ -1,6 +1,6 @@
 # Where in Ireland is Liam the Leprechaun Game
 
-![Where in Ireland is Liam the Leprechaun](documentation/liamtheleprechaungame.jpg)
+![Where in Ireland is Liam the Leprechaun](documentation/responsive.jpg)
 
 ## Index - Table of Contents
 * [Introduction](#introduction)
