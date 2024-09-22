@@ -218,3 +218,57 @@ header {
     height: 140px;
     background-color: white;
 }
+
+/* Media query: tablets and smaller (970px and lower) */
+@media screen and (max-width: 970px) {
+
+/* Header Styles */
+header {
+    font-size: 100%;
+}
+
+/* Main Game Screen Styles */
+#main-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Screen Sub-Container Styling */
+#questions-section, #stats-container, #energy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 20px auto 20px;
+}
+
+#stats-container {
+    order: 3;
+    margin-top: 20px;
+}
+#energy {
+    display: flex; 
+    flex-direction: column;
+    background-color: whitesmoke;
+    font-size: 125%;
+    width: 80vw;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 20px #005a00;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+#energy h2 {
+    display: none;
+}
+
+ #energy-tank {
+    display: none;
+ }
+}
