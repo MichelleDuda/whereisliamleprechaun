@@ -69,7 +69,7 @@ const Questions = [{
 
     {
         hints: ["He told me he was headed to Ireland's oldest city to see if any Viking ships were still there.",
-            "He was asking a lot of questions about crystal. Maybe he's planning anohter heist somewhere.",
+            "He was asking a lot of questions about crystal. Maybe he's planning another heist somewhere.",
             "I'm not sure where he went, but he was asking me if I knew where some guy named Reginald lived. He said it was some old tower but I had no idea what he was talking about.",
         ],
         choices: ["Waterford", "Wexford", "Wicklow", "Tipperary"],
