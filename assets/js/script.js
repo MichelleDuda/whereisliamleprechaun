@@ -8,6 +8,7 @@ let incorrectAnswers = 0;
 let introContainer = document.getElementById('intro-container');
 let gameRulesContainer = document.getElementById('game-rules-container');
 let mainScreenContainer = document.getElementById('main-screen');
+let statsContainer = document.getElementById('stats-container');
 
 // DOM Element References for General Buttons
 let rulesButton = document.getElementById('rules-button');
@@ -166,6 +167,9 @@ function playGame() {
  */
 function setRouteQuestion() {
     mainScreenContainer.classList.remove('hide');
+    questionsContainer.classList.remove('hide');
+    energyContainer.classList.remove('hide');
+    statsContainer.classList.remove('hide');
     question.classList.remove('hide');
     hintContainer.classList.remove('hide');
     questionNumber.classList.remove('hide');
@@ -263,18 +267,18 @@ function checkAnswer(event) {
         updateStats();
         if (currentLocation < 5) {
             correctAnswerContainer.classList.remove('hide');
-            questionNumber.classList.add('hide');
-            question.classList.add('hide');
-            hintContainer.classList.add('hide');
+            questionsContainer.classList.add('hide');
+            energyContainer.classList.add('hide');
+            statsContainer.classList.add('hide');
         } else {
             winContainer.classList.remove('hide');
             mainScreenContainer.classList.add('hide');
         }
 
     } else {
-        questionNumber.classList.add('hide');
-        question.classList.add('hide');
-        hintContainer.classList.add('hide');
+        questionsContainer.classList.add('hide');
+        energyContainer.classList.add('hide');
+        statsContainer.classList.add('hide');
         --currentEnergy;
         ++incorrectAnswers;
         updateEnergy();

@@ -120,7 +120,9 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 <img src="documentation/features/routeend.jpg">
 
 #### Feedback Dispalys
-- 
+- The game contains several other display containers that give the user feedback on their progress:
+
+##### Correct Answer/Incorrect Answer
 
 <img src="documentation/menupage.jpg">
 
