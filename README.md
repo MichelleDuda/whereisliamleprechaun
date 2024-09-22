@@ -52,12 +52,12 @@ The game targets primary school children (ages 8-12) who are looking to learn ab
 
 ### User Goals
  As a User, I want to:
-  - easily understand the purpose of the site.
-  - easily view instructions on how to play the game.
-  - easily and intuitively interact with the game.
-  - be able to see how many questions I have remaining.
-  - be able to see how many attempts I have left. 
-  - be able to easily see the result of the game and be able to play again.
+   - easily understand the purpose of the site.
+   - easily view instructions on how to play the game.
+   - easily and intuitively interact with the game.
+   - be able to see how many questions I have remaining.
+   - be able to see how many attempts I have left. 
+   - be able to easily see the result of the game and be able to play again.
 
 
 ## Design
