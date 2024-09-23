@@ -210,8 +210,7 @@ In the future, this game could be further developed to include the following:
     - <a href="https://github.com/michelleduda/whereisliamleprechaun/blob/main/documentation/validation-results/css-validation-results.pdf" target="_blank">CSS Results</a>
 
 - [Javascript Validator](https://jshint.com)
-  - Code from script.js passed through JSHint site with no errors. The following Metrics were logged: There are 9 functions in this file. Function with the largest signature take 1 arguments, while the median is 0. Largest function has 33 statements in it, while the median is 10. The most complex function has a cyclomatic complexity value of 8 while the median is 1.
-
+  - Code from script.js passed through JSHint site with no errors. The following Metrics were logged: There are 11 functions in this file. Function with the largest signature take 1 arguments, while the median is 0. Largest function has 34 statements in it, while the median is 6. The most complex function has a cyclomatic complexity value of 8 while the median is 1.
 
 
 ### Lighthouse Testing
