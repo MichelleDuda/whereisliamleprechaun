@@ -135,6 +135,7 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 
 ### Hint and Answer Section
 - The hint section contains three images that are labeled as Witness 1, Witness 2, and Witness 3. Rather than just having clues or questions written on the screen, I felt it engaged the user more to have to "interact" with these witnesses to get the hints needed to solve where Liam went. 
+- When the next county's question container populates there will be no hint text on the screen. A hover effect on the mouse pointer that changes it to a hand helps the user recognize where to click to listen to/read the hint. 
 - When you click on a witness a Javascript function to play the appropriate audio file is triggered via an event listener. The hint is then displayed in text and played via an audio file. 
 
 <img src="documentation/features/hint.jpg">
@@ -171,8 +172,8 @@ Google Fonts was used to import the Nerko One and Raleway fonts. These were chos
 
 ### Future Features
 In the future, this game could be further developed to include the following:
-   - A randomizer that creates new routes each time the game is played.
-   - A timer feature that allows Liam to get further away depending on how long the player takes to traverse the counties. 
+   - A randomizer that creates new routes each time the game is played.
+   - A timer feature that allows Liam to get further away depending on how long the player takes to traverse the counties. 
 
 
 ## Technologies Used
