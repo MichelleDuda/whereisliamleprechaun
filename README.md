@@ -270,6 +270,7 @@ This website was tested on the following browsers:
 1. The game-over-container remained on the screen after selecting to play again. Fixed by adding gameOverContainer.classList.add('hide') to the resetGame function. 
 2. Flags in route-container were not defaulting back to the mystery flags when a user selected to play again after completing the game. Fixed by adding code to reset all of route-container image sources to mysteryflag.jpg if currentLocation is equal to 0. 
 3. HTML validator returned error: Bad value for attribute src on element audio. Must be non-empty. Fixed by creating a default audio file and applying to audio element on index.html.
+4. Hints images were overflowing from container at less than 350px. Fixed by adding flex-wrap:wrap property to hints element. 
 
 ### Known Bugs
 There are no unaddressed known bugs at this time. 
