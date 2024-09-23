@@ -5,7 +5,7 @@
 ## Index - Table of Contents
 * [Introduction](#introduction)
 * [User Experience (UX)](#user-experience-ux) 
-    * [User Goals](#user-goals) 
+    * [Site Goals](#site-goals) 
 * [Design](#design)
     * [Colour](#colour)
     * [Fonts](#fonts)
@@ -29,6 +29,7 @@
     * [Validator Testing](#validator-testing)
     * [Lighthouse Testing](#lighthouse-testing)
     * [Additional Manual Testing](#additional-manual-testing)
+    * [User Story Testing](#user-story-testing)
     * [Browser Compatibility](#browser-compatibility)
     * [Bugs](#bugs)
     * [Known Bugs](#known-bugs)
@@ -50,14 +51,21 @@ The game targets primary school children (ages 8-12) who are looking to learn ab
 
 ## User Experience (UX)
 
+### Site Goals
+
+#### Site Owner Goals
+As the Site Owner, I want to create a web based game that:
+  1. captures and holds a users attention.
+  2. is educational.
+
 ### User Goals
  As a User, I want to:
-   - easily understand the purpose of the site.
-   - easily view instructions on how to play the game.
-   - easily and intuitively interact with the game.
-   - be able to see how many questions I have remaining.
-   - be able to see how many attempts I have left. 
-   - be able to easily see the result of the game and be able to play again.
+  1. easily understand the purpose of the site.
+  2. easily view instructions on how to play the game.
+  3. easily and intuitively interact with the game.
+  4. be able to see how many questions I have remaining.
+  5. be able to see how many attempts I have left. 
+  6. be able to easily see the result of the game and be able to play again.
 
 
 ## Design
@@ -235,6 +243,20 @@ In the future, this game could be further developed to include the following:
 | T14                        | UX - Game Win                              | Click on the correct answer for the final question.                                                                                                          | The main game screen will be hidden and the 'Game Won' Container will be displayed.                                                                                                                                        | Works As Expected |
 | T15                        | Interaction - Game Win                     | Click on Play Again Button                                                                                                                                   | The 'Game Won' container will be hidden and the main game screen will reappear. Current stats, flags, and fuel gauge will all be reset to default values. The first question will appear on the screen.                    | Works As Expected |
 | T16                        | UX - Responsiveness                        | Repeat all above tests for various screen sizes:<br>a. Desktop 1920 x 1080<br>b. Laptop 1366 x768<br>c. Tablet 820 x 1180<br>d. Mobile Phone 424 x 896       | Repeat the above tests on various screen sizes.                                                                                                                                                                                 | Works As Expected |
+
+### User Story Testing
+
+### Site Owner Goals
+1. The use of a story about a Leprechaun that has stolen a pot of gold helps to draw the user into the quiz game and gives them a purpose for playing. The route container showing them each step closer to Liam serves as motivation to continue, as do the feedback containers that appear after each answer.
+2. The game is very educational in that the questions are formatted as a series of sometimes vague, sometimes more obvious, hints that allow a user to learn pieces of information about each county. If a user only knows one of the three facts about the county already they'll learn the other two in the process of coming to an answer. 
+
+### User Goals
+1. I am easily able to understand the purpose of the site because of the Introduction container and How to Play container. It provides me with a back story giving the game purpose and lets me know that the game will have me chasing Liam through the Counties of Ireland by figuring out where he is heading based on hints provided.  
+2. I am able to easily view instructions on how to play the game, as the landing page has a clear button labeled 'How to Play'. As a user, I am made to click on this button in order to proceed to play the game.  
+3. I am able to easily and intuitively interact with the game as the 'How to Play' section clearly states how to interact with the game. Furthermore, a hover effect changing the pointer when I am over a clickable feature helps visually indicate that I should click on a particular item. 
+4. The route container that populates the county flags after I have correctly answered the question provides a clear view as to how far I have left to go to capture Liam. 
+5. The fuel meter is displayed clearly within view of the questions. It is easy to see how much I have remaining on larger screens in particular as it tells me how much fuel I have remaining as a number and as a visual meter. 
+6. At the end of the game there are two very clear messages that populate stating whether or not I have won the game, along with a button to play again. 
 
 
 ### Browser Compatibility
